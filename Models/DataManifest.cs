@@ -10,6 +10,7 @@ namespace StarPrismTools.Models
 		{
 			Characters = new List<EntityIndexItem>();
 			Skills = new List<EntityIndexItem>();
+			Concepts = new List<EntityIndexItem>();
 		}
 
 		[DataMember(Order = 1)]
@@ -23,6 +24,9 @@ namespace StarPrismTools.Models
 
 		[DataMember(Order = 4)]
 		public List<EntityIndexItem> Skills { get; set; }
+
+		[DataMember(Order = 5)]
+		public List<EntityIndexItem> Concepts { get; set; }
 	}
 
 	[DataContract]

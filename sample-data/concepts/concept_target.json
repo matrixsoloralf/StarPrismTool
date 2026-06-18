@@ -1,0 +1,23 @@
+{
+  "Id": "concept_target",
+  "Name": "目标",
+  "Summary": "目标是技能、攻击或效果指定并结算影响的角色或格。",
+  "Description": "目标可能区分敌方、己方、友方、攻击目标、中心格或范围内目标。若某效果写明不能被指定为目标，则不能成为对应效果的合法目标。",
+  "Category": "range",
+  "CategoryName": "距离与范围",
+  "Order": 20,
+  "Status": "current",
+  "Aliases": [
+    "指定目标",
+    "攻击目标"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_range"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "目标关系"
+  }
+}

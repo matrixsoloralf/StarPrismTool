@@ -1,0 +1,20 @@
+{
+  "Id": "concept_plus_cost",
+  "Name": "+",
+  "Summary": "+ 表示必须同时支付列出的所有牌。",
+  "Description": "例如 A + T 表示需要同时使用或支付攻击牌和战术牌，缺少任意一张都不能发动该效果。",
+  "Category": "symbol",
+  "CategoryName": "支付符号",
+  "Order": 10,
+  "Status": "current",
+  "Aliases": [
+    "同时支付"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "支付符号"
+  }
+}

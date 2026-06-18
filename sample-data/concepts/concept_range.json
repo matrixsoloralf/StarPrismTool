@@ -1,0 +1,23 @@
+{
+  "Id": "concept_range",
+  "Name": "距离",
+  "Summary": "距离用于判断目标是否处在技能或攻击允许的格数范围内。",
+  "Description": "文本中的距离 2、距离 2-3、直线 4 格等都是目标合法性的一部分。范围攻击还会进一步描述目标区域或影响格形状。",
+  "Category": "range",
+  "CategoryName": "距离与范围",
+  "Order": 10,
+  "Status": "current",
+  "Aliases": [
+    "射程",
+    "范围"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_target"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "距离与范围"
+  }
+}

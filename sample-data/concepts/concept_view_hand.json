@@ -1,0 +1,23 @@
+{
+  "Id": "concept_view_hand",
+  "Name": "查看手牌",
+  "Summary": "查看手牌表示获得目标手牌内容的信息。",
+  "Description": "查看手牌可能是查看 1 张、查看多张或查看牌堆顶。查看后的牌可能被封印、弃置、获得或按顺序放回。",
+  "Category": "card_zone",
+  "CategoryName": "手牌与区域",
+  "Order": 10,
+  "Status": "current",
+  "Aliases": [
+    "查看",
+    "亮出"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_sense_card"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "手牌与区域"
+  }
+}

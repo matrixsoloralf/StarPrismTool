@@ -1,0 +1,24 @@
+{
+  "Id": "concept_defense_card",
+  "Name": "防御牌",
+  "Summary": "防御牌用于抵御伤害、响应攻击或触发防御类效果，简称 D。",
+  "Description": "防御牌常出现在响应时机中。若文本写明不可响应 D 或不可防御，则不能用普通防御方式抵御该次伤害。",
+  "Category": "card_type",
+  "CategoryName": "基础牌型",
+  "Order": 20,
+  "Status": "current",
+  "Aliases": [
+    "D",
+    "Defense"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_response",
+    "concept_damage"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "基础牌型"
+  }
+}

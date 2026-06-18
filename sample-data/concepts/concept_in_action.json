@@ -1,0 +1,22 @@
+{
+  "Id": "concept_in_action",
+  "Name": "行动中",
+  "Summary": "行动中表示角色正在自己的行动流程内结算效果。",
+  "Description": "写有行动中限 1 次的效果，只能在该角色一次行动内发动指定次数。行动中效果通常与主动攻击、主动移动或放置牌有关。",
+  "Category": "timing",
+  "CategoryName": "行动与时机",
+  "Order": 10,
+  "Status": "current",
+  "Aliases": [
+    "自己的行动内"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_out_of_action"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "行动概念"
+  }
+}

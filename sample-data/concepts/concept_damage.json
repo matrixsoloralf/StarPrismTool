@@ -1,0 +1,25 @@
+{
+  "Id": "concept_damage",
+  "Name": "伤害",
+  "Summary": "伤害是攻击或效果对目标生命值造成的损失。",
+  "Description": "伤害可分为物理伤害和魔法伤害，也可能被防御、响应或不可防御文本影响。失去 HP 不一定等同于可被防御的伤害。",
+  "Category": "attack",
+  "CategoryName": "攻击与伤害",
+  "Order": 10,
+  "Status": "current",
+  "Aliases": [
+    "物理伤害",
+    "魔法伤害",
+    "失去HP"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_defense_card",
+    "concept_response"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "攻击与伤害"
+  }
+}

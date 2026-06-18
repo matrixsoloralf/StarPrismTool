@@ -1,0 +1,24 @@
+{
+  "Id": "concept_mobility_card",
+  "Name": "机动牌",
+  "Summary": "机动牌提供移动、位移或机动力相关效果，简称 M。",
+  "Description": "机动牌可能直接产生移动，也可能被弃置以获得机动力。它经常与普通移动、腾空移动、隔空移动等移动概念关联。",
+  "Category": "card_type",
+  "CategoryName": "基础牌型",
+  "Order": 30,
+  "Status": "current",
+  "Aliases": [
+    "M",
+    "Mobility"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_mobility_point",
+    "concept_move_action"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "基础牌型"
+  }
+}

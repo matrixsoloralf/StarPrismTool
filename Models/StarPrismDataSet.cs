@@ -9,6 +9,7 @@ namespace StarPrismTools.Models
 			Manifest = new DataManifest();
 			Characters = new List<Character>();
 			Skills = new List<Skill>();
+			Concepts = new List<Concept>();
 		}
 
 		public DataManifest Manifest { get; set; }
@@ -16,5 +17,7 @@ namespace StarPrismTools.Models
 		public List<Character> Characters { get; set; }
 
 		public List<Skill> Skills { get; set; }
+
+		public List<Concept> Concepts { get; set; }
 	}
 }

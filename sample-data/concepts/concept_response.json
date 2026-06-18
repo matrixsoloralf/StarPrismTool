@@ -1,0 +1,23 @@
+{
+  "Id": "concept_response",
+  "Name": "响应",
+  "Summary": "响应是在指定触发时机插入结算的效果。",
+  "Description": "响应通常发生在受到攻击指定、受到伤害、抵御伤害后等节点。响应能否发动取决于文本中可视作的牌型、距离、目标和次数限制。",
+  "Category": "timing",
+  "CategoryName": "行动与时机",
+  "Order": 30,
+  "Status": "current",
+  "Aliases": [
+    "反应",
+    "插入结算"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_defense_card"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "行动概念"
+  }
+}

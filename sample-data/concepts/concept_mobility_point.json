@@ -1,0 +1,22 @@
+{
+  "Id": "concept_mobility_point",
+  "Name": "机动力",
+  "Summary": "机动力是执行移动动作时消耗或获得的移动资源。",
+  "Description": "角色可以通过部分技能或弃置牌获得机动力。机动力通常用于移动指定格数，但具体移动方式仍需看技能文本。",
+  "Category": "movement",
+  "CategoryName": "移动概念",
+  "Order": 10,
+  "Status": "current",
+  "Aliases": [
+    "移动力"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_move_action"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "移动概念"
+  }
+}

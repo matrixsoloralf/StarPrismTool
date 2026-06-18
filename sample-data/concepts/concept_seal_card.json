@@ -1,0 +1,22 @@
+{
+  "Id": "concept_seal_card",
+  "Name": "封印手牌",
+  "Summary": "封印手牌表示将手牌置于受限制状态，影响其后续使用或响应。",
+  "Description": "封印可能来自查看、攻击命中、伤害结算或角色能力。解除封印、弃置封印手牌等效果会改变该状态。",
+  "Category": "card_zone",
+  "CategoryName": "手牌与区域",
+  "Order": 20,
+  "Status": "current",
+  "Aliases": [
+    "封印"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_view_hand"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "手牌与区域"
+  }
+}

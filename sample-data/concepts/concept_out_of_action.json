@@ -1,0 +1,22 @@
+{
+  "Id": "concept_out_of_action",
+  "Name": "行动外",
+  "Summary": "行动外表示不在该角色自己的行动流程内结算效果。",
+  "Description": "行动外效果常用于响应、被攻击指定、受到伤害后或其他角色行动期间。若文本写明行动外限 1 次，则按对应限制结算。",
+  "Category": "timing",
+  "CategoryName": "行动与时机",
+  "Order": 20,
+  "Status": "current",
+  "Aliases": [
+    "非自己行动"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_response"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "行动概念"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "Id": "concept_unknown_cost",
+  "Name": "?",
+  "Summary": "? 表示任意牌或由技能文本进一步限定的未知牌型。",
+  "Description": "当效果写明舍弃 ? 或亮出 ? 时，优先读取技能文本对牌型、来源和时机的限制。",
+  "Category": "symbol",
+  "CategoryName": "支付符号",
+  "Order": 30,
+  "Status": "current",
+  "Aliases": [
+    "任意牌",
+    "未知牌型"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "支付符号"
+  }
+}

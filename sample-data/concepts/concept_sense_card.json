@@ -1,0 +1,24 @@
+{
+  "Id": "concept_sense_card",
+  "Name": "感知牌",
+  "Summary": "感知牌用于查看、预判、反制或信息获取，简称 S。",
+  "Description": "感知牌常与查看手牌、封印手牌、响应攻击或使攻击失效等效果关联，强调信息差和时机控制。",
+  "Category": "card_type",
+  "CategoryName": "基础牌型",
+  "Order": 40,
+  "Status": "current",
+  "Aliases": [
+    "S",
+    "Sense"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_view_hand",
+    "concept_response"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "基础牌型"
+  }
+}

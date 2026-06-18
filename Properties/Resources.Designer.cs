@@ -63,6 +63,26 @@ namespace StarPrismTools.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap _5471389542d547acad1b899731e8da14 {
+            get {
+                object obj = ResourceManager.GetObject("5471389542d547acad1b899731e8da14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _83b752f6af6642b38c2cdf18bf9e71bb {
+            get {
+                object obj = ResourceManager.GetObject("83b752f6af6642b38c2cdf18bf9e71bb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap be0abb14409e4427af114252e5b91dad {
             get {
                 object obj = ResourceManager.GetObject("be0abb14409e4427af114252e5b91dad", resourceCulture);

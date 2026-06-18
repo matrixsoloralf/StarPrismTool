@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StarPrismTools.Components;
 using StarPrismTools.Data;
 using StarPrismTools.Data.Git;
 using StarPrismTools.Data.Json;
@@ -23,6 +24,8 @@ namespace StarPrismTools
 		private readonly IGitService gitService;
 		private AppConfiguration configuration;
 		private StarPrismDataSet dataSet;
+		private readonly Dictionary<string, ConceptCard> conceptCardMap;
+		private ConceptCard highlightedConceptCard;
 
 		public frmMain()
 		{
@@ -31,10 +34,18 @@ namespace StarPrismTools
 			configurationService = new AppConfigurationService(jsonFileStore);
 			dataService = new StarPrismDataService(jsonFileStore);
 			gitService = new GitService();
+			conceptCardMap = new Dictionary<string, ConceptCard>();
 			Load += FrmMain_Load;
 			btnLoad.Click += BtnLoad_Click;
 			btnSave.Click += BtnSave_Click;
 			btnExit.Click += BtnExit_Click;
+			btnExpandAll.Click += BtnExpandAll_Click;
+			btnCollapseAll.Click += BtnCollapseAll_Click;
+			btnConceptSearch.Click += BtnConceptSearch_Click;
+			txtConceptSearchPattern.KeyDown += TxtConceptSearchPattern_KeyDown;
+			tvwConcept.AfterSelect += TvwConcept_AfterSelect;
+			lstConcept.SelectedIndexChanged += LstConcept_SelectedIndexChanged;
+			pnlConceptContainer.Resize += PnlConceptContainer_Resize;
 		}
 
 		private void FrmMain_Load(object sender, EventArgs e)
@@ -120,17 +131,320 @@ namespace StarPrismTools
 				dataSet = new StarPrismDataSet();
 				characterCard.BindData(dataSet.Characters, dataSet.Skills, configuration.RepositoryPath);
 				skillList.BindData(dataSet.Skills);
+				BindConcepts(dataSet.Concepts);
 				return;
 			}
 
 			dataSet = loadResult.Value;
 			characterCard.BindData(dataSet.Characters, dataSet.Skills, configuration.RepositoryPath);
 			skillList.BindData(dataSet.Skills);
+			BindConcepts(dataSet.Concepts);
+		}
+
+		private void BindConcepts(IEnumerable<Concept> concepts)
+		{
+			List<Concept> orderedConcepts = OrderConcepts(concepts).ToList();
+			BuildConceptCards(orderedConcepts);
+			BuildConceptTree(orderedConcepts);
+			RefreshConceptSearchResults();
+		}
+
+		private void BuildConceptCards(IEnumerable<Concept> concepts)
+		{
+			pnlConceptContainer.SuspendLayout();
+			pnlConceptContainer.Controls.Clear();
+			pnlConceptContainer.WrapContents = false;
+			conceptCardMap.Clear();
+			highlightedConceptCard = null;
+
+			foreach (Concept concept in concepts)
+			{
+				ConceptCard card = new ConceptCard();
+				card.Margin = new Padding(4, 4, 12, 4);
+				card.Width = GetConceptCardWidth();
+				card.BindData(concept, configuration == null ? null : configuration.RepositoryPath);
+				pnlConceptContainer.Controls.Add(card);
+
+				if (!string.IsNullOrWhiteSpace(concept.Id))
+				{
+					conceptCardMap[concept.Id] = card;
+				}
+			}
+
+			pnlConceptContainer.ResumeLayout();
+		}
+
+		private void BuildConceptTree(IEnumerable<Concept> concepts)
+		{
+			tvwConcept.BeginUpdate();
+			tvwConcept.Nodes.Clear();
+
+			foreach (IGrouping<string, Concept> group in concepts.GroupBy(GetConceptCategoryKey))
+			{
+				Concept firstConcept = group.FirstOrDefault();
+				string categoryName = GetConceptCategoryName(firstConcept);
+				TreeNode categoryNode = new TreeNode(categoryName);
+				categoryNode.Tag = "category:" + group.Key;
+
+				foreach (Concept concept in group)
+				{
+					TreeNode conceptNode = new TreeNode(concept.Name);
+					conceptNode.Tag = "concept:" + concept.Id;
+					categoryNode.Nodes.Add(conceptNode);
+				}
+
+				tvwConcept.Nodes.Add(categoryNode);
+			}
+
+			tvwConcept.EndUpdate();
+			tvwConcept.ExpandAll();
+		}
+
+		private void RefreshConceptSearchResults()
+		{
+			string pattern = txtConceptSearchPattern.Text;
+			List<Concept> matches = SearchConcepts(pattern).ToList();
+			lstConcept.BeginUpdate();
+			lstConcept.Items.Clear();
+
+			foreach (Concept concept in matches)
+			{
+				lstConcept.Items.Add(new ConceptListItem(concept));
+			}
+
+			lstConcept.EndUpdate();
+		}
+
+		private IEnumerable<Concept> SearchConcepts(string pattern)
+		{
+			IEnumerable<Concept> concepts = OrderConcepts(dataSet == null ? null : dataSet.Concepts);
+			if (string.IsNullOrWhiteSpace(pattern))
+			{
+				return concepts;
+			}
+
+			string normalizedPattern = NormalizeSearchText(pattern);
+			return concepts
+				.Select(concept => new { Concept = concept, Score = GetConceptSearchScore(concept, normalizedPattern) })
+				.Where(result => result.Score > 0)
+				.OrderByDescending(result => result.Score)
+				.ThenBy(result => result.Concept.Order)
+				.Select(result => result.Concept);
+		}
+
+		private static int GetConceptSearchScore(Concept concept, string normalizedPattern)
+		{
+			if (concept == null || string.IsNullOrEmpty(normalizedPattern))
+			{
+				return 0;
+			}
+
+			int score = 0;
+			score = Math.Max(score, MatchScore(concept.Name, normalizedPattern, 100));
+			if (concept.Aliases != null)
+			{
+				foreach (string alias in concept.Aliases)
+				{
+					score = Math.Max(score, MatchScore(alias, normalizedPattern, 90));
+				}
+			}
+
+			score = Math.Max(score, MatchScore(concept.Summary, normalizedPattern, 70));
+			score = Math.Max(score, MatchScore(concept.Description, normalizedPattern, 50));
+			score = Math.Max(score, MatchScore(concept.CategoryName, normalizedPattern, 40));
+			return score;
+		}
+
+		private static int MatchScore(string value, string normalizedPattern, int baseScore)
+		{
+			string normalizedValue = NormalizeSearchText(value);
+			if (string.IsNullOrEmpty(normalizedValue))
+			{
+				return 0;
+			}
+
+			if (normalizedValue == normalizedPattern)
+			{
+				return baseScore + 20;
+			}
+
+			if (normalizedValue.Contains(normalizedPattern))
+			{
+				return baseScore;
+			}
+
+			return IsSubsequence(normalizedPattern, normalizedValue) ? baseScore / 2 : 0;
+		}
+
+		private static bool IsSubsequence(string pattern, string value)
+		{
+			int patternIndex = 0;
+			for (int i = 0; i < value.Length && patternIndex < pattern.Length; i++)
+			{
+				if (value[i] == pattern[patternIndex])
+				{
+					patternIndex++;
+				}
+			}
+
+			return patternIndex == pattern.Length;
+		}
+
+		private static string NormalizeSearchText(string value)
+		{
+			return string.IsNullOrWhiteSpace(value)
+				? string.Empty
+				: value.Trim().ToLowerInvariant().Replace(" ", string.Empty);
+		}
+
+		private IEnumerable<Concept> OrderConcepts(IEnumerable<Concept> concepts)
+		{
+			return (concepts ?? Enumerable.Empty<Concept>())
+				.OrderBy(concept => string.IsNullOrWhiteSpace(concept.Category) ? "zzzz" : concept.Category)
+				.ThenBy(concept => concept.Order)
+				.ThenBy(concept => concept.Name);
+		}
+
+		private static string GetConceptCategoryKey(Concept concept)
+		{
+			return concept == null || string.IsNullOrWhiteSpace(concept.Category) ? "uncategorized" : concept.Category;
+		}
+
+		private static string GetConceptCategoryName(Concept concept)
+		{
+			if (concept != null && !string.IsNullOrWhiteSpace(concept.CategoryName))
+			{
+				return concept.CategoryName;
+			}
+
+			string category = GetConceptCategoryKey(concept);
+			return category == "uncategorized" ? "Uncategorized" : category;
+		}
+
+		private void NavigateToConcept(string conceptId)
+		{
+			if (string.IsNullOrWhiteSpace(conceptId) || !conceptCardMap.ContainsKey(conceptId))
+			{
+				return;
+			}
+
+			ConceptCard card = conceptCardMap[conceptId];
+			if (highlightedConceptCard != null && highlightedConceptCard != card)
+			{
+				highlightedConceptCard.SetHighlighted(false);
+			}
+
+			highlightedConceptCard = card;
+			highlightedConceptCard.SetHighlighted(true);
+			pnlConceptContainer.ScrollControlIntoView(card);
+		}
+
+		private void NavigateToCategory(string category)
+		{
+			Concept concept = OrderConcepts(dataSet == null ? null : dataSet.Concepts)
+				.FirstOrDefault(item => GetConceptCategoryKey(item) == category);
+			if (concept != null)
+			{
+				NavigateToConcept(concept.Id);
+			}
+		}
+
+		private void ResizeConceptCards()
+		{
+			int width = GetConceptCardWidth();
+			foreach (ConceptCard card in conceptCardMap.Values)
+			{
+				card.Width = width;
+			}
+		}
+
+		private int GetConceptCardWidth()
+		{
+			return Math.Max(480, pnlConceptContainer.ClientSize.Width - 28);
+		}
+
+		private void BtnExpandAll_Click(object sender, EventArgs e)
+		{
+			tvwConcept.ExpandAll();
+		}
+
+		private void BtnCollapseAll_Click(object sender, EventArgs e)
+		{
+			tvwConcept.CollapseAll();
+		}
+
+		private void BtnConceptSearch_Click(object sender, EventArgs e)
+		{
+			RefreshConceptSearchResults();
+		}
+
+		private void TxtConceptSearchPattern_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				e.Handled = true;
+				e.SuppressKeyPress = true;
+				RefreshConceptSearchResults();
+			}
+		}
+
+		private void TvwConcept_AfterSelect(object sender, TreeViewEventArgs e)
+		{
+			string tag = e.Node == null ? null : e.Node.Tag as string;
+			if (string.IsNullOrWhiteSpace(tag))
+			{
+				return;
+			}
+
+			if (tag.StartsWith("concept:", StringComparison.Ordinal))
+			{
+				NavigateToConcept(tag.Substring("concept:".Length));
+			}
+			else if (tag.StartsWith("category:", StringComparison.Ordinal))
+			{
+				NavigateToCategory(tag.Substring("category:".Length));
+			}
+		}
+
+		private void LstConcept_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			ConceptListItem item = lstConcept.SelectedItem as ConceptListItem;
+			if (item != null && item.Concept != null)
+			{
+				NavigateToConcept(item.Concept.Id);
+			}
+		}
+
+		private void PnlConceptContainer_Resize(object sender, EventArgs e)
+		{
+			ResizeConceptCards();
 		}
 
 		private void ShowError(OperationResult result)
 		{
 			MessageBox.Show(this, result.Message, "StarPrism Tools", MessageBoxButtons.OK, MessageBoxIcon.Error);
+		}
+
+		private class ConceptListItem
+		{
+			public ConceptListItem(Concept concept)
+			{
+				Concept = concept;
+			}
+
+			public Concept Concept { get; private set; }
+
+			public override string ToString()
+			{
+				if (Concept == null)
+				{
+					return string.Empty;
+				}
+
+				return string.IsNullOrWhiteSpace(Concept.CategoryName)
+					? Concept.Name
+					: Concept.Name + " [" + Concept.CategoryName + "]";
+			}
 		}
 	}
 }

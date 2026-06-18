@@ -1,0 +1,21 @@
+{
+  "Id": "concept_or_cost",
+  "Name": "/",
+  "Summary": "/ 表示可在列出的牌型中选择其一支付。",
+  "Description": "例如 S/M 表示可以支付感知牌或机动牌。具体能否支付仍需满足技能文本中的时机、目标和距离要求。",
+  "Category": "symbol",
+  "CategoryName": "支付符号",
+  "Order": 20,
+  "Status": "current",
+  "Aliases": [
+    "二选一",
+    "或"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "支付符号"
+  }
+}

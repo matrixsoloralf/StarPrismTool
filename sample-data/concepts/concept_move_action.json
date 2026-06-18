@@ -1,0 +1,23 @@
+{
+  "Id": "concept_move_action",
+  "Name": "移动动作",
+  "Summary": "移动动作是角色改变所在格位置的行为。",
+  "Description": "移动动作可能是普通移动、腾空移动、隔空移动、被驱逐或被击退。是否会被阻挡、是否要求直线、是否必须接近目标，由具体文本决定。",
+  "Category": "movement",
+  "CategoryName": "移动概念",
+  "Order": 20,
+  "Status": "current",
+  "Aliases": [
+    "移动",
+    "位移"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_mobility_point"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "移动概念"
+  }
+}

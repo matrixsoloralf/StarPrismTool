@@ -1,0 +1,24 @@
+{
+  "Id": "concept_attack_card",
+  "Name": "攻击牌",
+  "Summary": "攻击牌是主动制造伤害或推动攻击结算的基础牌型，简称 A。",
+  "Description": "角色使用攻击牌时，通常需要指定合法目标、距离或范围，并按照技能文本结算伤害、移动、弃置等效果。",
+  "Category": "card_type",
+  "CategoryName": "基础牌型",
+  "Order": 10,
+  "Status": "current",
+  "Aliases": [
+    "A",
+    "Attack"
+  ],
+  "Images": [],
+  "RelatedConceptIds": [
+    "concept_attack",
+    "concept_target"
+  ],
+  "Source": {
+    "Document": "StarPrism_Concept_Revised_20260616.md",
+    "Version": "2026-06-16",
+    "Section": "基础牌型"
+  }
+}

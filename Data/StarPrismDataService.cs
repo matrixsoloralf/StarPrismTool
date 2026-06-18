@@ -39,7 +39,8 @@ namespace StarPrismTools.Data
 			{
 				Manifest = manifestResult.Value,
 				Characters = new List<Character>(),
-				Skills = new List<Skill>()
+				Skills = new List<Skill>(),
+				Concepts = new List<Concept>()
 			};
 
 			foreach (EntityIndexItem item in dataSet.Manifest.Characters)
@@ -62,6 +63,31 @@ namespace StarPrismTools.Data
 				}
 
 				dataSet.Skills.Add(skillResult.Value);
+			}
+
+			if (dataSet.Manifest.Concepts != null && dataSet.Manifest.Concepts.Count > 0)
+			{
+				foreach (EntityIndexItem item in dataSet.Manifest.Concepts)
+				{
+					OperationResult<Concept> conceptResult = jsonFileStore.Load<Concept>(Path.Combine(repositoryRoot, item.Path));
+					if (!conceptResult.Success)
+					{
+						return OperationResult<StarPrismDataSet>.Fail(conceptResult.Message, conceptResult.Exception);
+					}
+
+					dataSet.Concepts.Add(conceptResult.Value);
+				}
+			}
+			else
+			{
+				ConceptRepository conceptRepository = new ConceptRepository(jsonFileStore, repositoryRoot);
+				OperationResult<List<Concept>> conceptsResult = conceptRepository.LoadAll();
+				if (!conceptsResult.Success)
+				{
+					return OperationResult<StarPrismDataSet>.Fail(conceptsResult.Message, conceptsResult.Exception);
+				}
+
+				dataSet.Concepts = conceptsResult.Value;
 			}
 
 			return OperationResult<StarPrismDataSet>.Ok(dataSet);
