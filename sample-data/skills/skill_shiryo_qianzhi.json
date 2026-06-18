@@ -1,0 +1,1 @@
+{ "Id": "skill_shiryo_qianzhi", "Name": "牵制", "Type": "trigger", "Trigger": "once_outside_action_when_drawing_from_deck", "Costs": [], "Targeting": null, "Description": "行动外限 1 次。从牌库补充手牌时，可改为从距离 2 内的敌方角色的手牌中随机获得 1 张。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "获得牌", "干扰" ] } }

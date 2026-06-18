@@ -1,0 +1,1 @@
+{ "Id": "skill_kohara_shusidikang", "Name": "殊死抵抗", "Type": "trigger", "Trigger": "when_taking_damage", "Costs": [], "Targeting": null, "Description": "受到伤害时，如当前手牌数少于 2，则本次伤害降为 0。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "防御" ] } }

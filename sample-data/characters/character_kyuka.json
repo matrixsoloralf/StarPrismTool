@@ -1,0 +1,30 @@
+{
+  "Id": "character_kyuka",
+  "Name": "鸠歌",
+  "Title": "孤鹜剑",
+  "DisplayName": "孤鹜剑 鸠歌",
+  "Profile": {
+    "Sex": "男",
+    "Age": 17,
+    "Story": "对丰厚家业毫无兴趣，一心精进剑术、追求自我的贵公子。",
+    "Quote": "放马过来吧，我的剑法可不只是好看而已。"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/kyuka/cards/02Kyuka.png",
+      "assets/characters/kyuka/cards/19Kyuka.png",
+      "assets/characters/kyuka/cards/35Kyuka.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_kyuka_yushajian", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyuka_tianxiangluanwu", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyuka_yingxi", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyuka_shoushen", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyuka_ganrao", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyuka_qingbu", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "剑术", "近战" ] }
+}

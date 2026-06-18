@@ -1,0 +1,1 @@
+{ "Id": "skill_lulu_shanxian", "Name": "闪现", "Type": "active", "Trigger": "", "Costs": [ { "Card": "M", "Count": 1 } ], "Targeting": null, "Description": "使用 M 隔空移动距离 2 内任意 1 格。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "移动" ] } }

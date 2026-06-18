@@ -1,0 +1,30 @@
+{
+  "Id": "character_zhiyou",
+  "Name": "致友",
+  "Title": "百步穿杨",
+  "DisplayName": "百步穿杨 致友",
+  "Profile": {
+    "Sex": "男",
+    "Age": 24,
+    "Story": "村庄的民兵队长，对任何迫近的威胁都始终毫不松懈。",
+    "Quote": "孩子们的笑容，就是我最向往的风景。"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/zhiyou/cards/05Zhiyou.png",
+      "assets/characters/zhiyou/cards/22Zhiyou.png",
+      "assets/characters/zhiyou/cards/38Zhiyou.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_zhiyou_anjian_nanfang", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_zhiyou_fenliejian", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_zhiyou_juji", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_zhiyou_yuhui", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_zhiyou_youji", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_zhiyou_yinni", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "弓", "远程" ] }
+}

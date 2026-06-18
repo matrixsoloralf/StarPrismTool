@@ -1,0 +1,1 @@
+{ "Id": "skill_lulu_dongcha", "Name": "洞察", "Type": "passive", "Trigger": "", "Costs": [], "Targeting": null, "Description": "S 可对距离 3 的目标使用。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "侦察", "远程" ] } }

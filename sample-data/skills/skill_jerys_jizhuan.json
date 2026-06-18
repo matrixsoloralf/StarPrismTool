@@ -1,0 +1,1 @@
+{ "Id": "skill_jerys_jizhuan", "Name": "急转", "Type": "trigger", "Trigger": "after_straight_move_at_least_2_with_zero_mobility", "Costs": [], "Targeting": null, "Description": "沿直线移动至少 2 格后如剩余机动力为 0，可向非直线路径的方向额外移动 1 格。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "移动" ] } }

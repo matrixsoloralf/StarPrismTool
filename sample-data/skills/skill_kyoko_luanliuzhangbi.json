@@ -1,0 +1,1 @@
+{ "Id": "skill_kyoko_luanliuzhangbi", "Name": "乱流障壁", "Type": "response", "Trigger": "when_taking_damage", "Costs": [ { "Card": "D", "Count": 2 } ], "Targeting": null, "Description": "受到伤害时，响应 D + D 抵御 2 点伤害，并可获得 1 张本次攻击用牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "防御" ] } }

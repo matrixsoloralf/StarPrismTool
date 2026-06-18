@@ -1,0 +1,1 @@
+{ "Id": "skill_master_er_feichan", "Name": "飞檐", "Type": "active", "Trigger": "", "Costs": [ { "Card": "M", "Count": 1 } ], "Targeting": null, "Description": "使用 M 可获得 4 点机动力，但下次移动只能在障碍物或者单位的临近格进行。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "移动", "机动力" ] } }

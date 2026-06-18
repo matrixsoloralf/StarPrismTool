@@ -1,0 +1,37 @@
+{
+  "Id": "skill_ur_zhijue",
+  "Name": "直觉",
+  "Type": "trigger",
+  "Trigger": "when_melee_target_uses_S",
+  "Costs": [],
+  "Targeting": null,
+  "Description": "对近战目标使用 S 时，可多查看 1 张手牌，并封印其中 1 张。",
+  "Effects": [
+    {
+      "Kind": "inspect_hand",
+      "Target": "target",
+      "Amount": 1,
+      "DamageType": "",
+      "Condition": "target_uses_S",
+      "Notes": "可多查看 1 张手牌。"
+    },
+    {
+      "Kind": "seal_hand_card",
+      "Target": "target",
+      "Amount": 1,
+      "DamageType": "",
+      "Condition": "after_inspect",
+      "Notes": ""
+    }
+  ],
+  "Options": [],
+  "Metadata": {
+    "Version": 1,
+    "CreatedAt": "2026-06-18T00:00:00",
+    "UpdatedAt": "2026-06-18T00:00:00",
+    "Tags": [
+      "封印",
+      "近战"
+    ]
+  }
+}

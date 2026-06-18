@@ -1,0 +1,1 @@
+{ "Id": "skill_sakura_lingkong", "Name": "凌空", "Type": "active", "Trigger": "", "Costs": [ { "Card": "M", "Count": 1 } ], "Targeting": null, "Description": "使用 M 腾空移动 2 格。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "移动" ] } }

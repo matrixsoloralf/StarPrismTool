@@ -1,0 +1,30 @@
+{
+  "Id": "character_muir",
+  "Name": "缪",
+  "Title": "霜之语",
+  "DisplayName": "霜之语 缪",
+  "Profile": {
+    "Sex": "男",
+    "Age": 25,
+    "Story": "魔法学院导师，冰冻系法术无人能出其右，本人却十分怕冷。",
+    "Quote": "喂！你这家伙，不怕冷吗？我可是怕得要命！"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/muir/cards/14Muir.png",
+      "assets/characters/muir/cards/31Muir.png",
+      "assets/characters/muir/cards/47Muir.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_muir_shuangdongxinxing", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_muir_jintuiziru", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_muir_bingdong", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_muir_yingbian", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_muir_bangong", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_muir_zisheng", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "冰冻", "魔法" ] }
+}

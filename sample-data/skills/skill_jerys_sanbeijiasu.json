@@ -1,0 +1,1 @@
+{ "Id": "skill_jerys_sanbeijiasu", "Name": "三倍加速", "Type": "active", "Trigger": "during_action", "Costs": [], "Targeting": null, "Description": "行动中，可最多放置 1 张 T，使自身的主动移动全部视为直线方向移动。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "移动" ] } }

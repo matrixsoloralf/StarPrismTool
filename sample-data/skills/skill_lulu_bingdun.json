@@ -1,0 +1,1 @@
+{ "Id": "skill_lulu_bingdun", "Name": "冰盾", "Type": "response", "Trigger": "after_defending_with_D", "Costs": [], "Targeting": null, "Description": "响应 D 抵御伤害后，可弃置近战攻击者 1 张手牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "弃牌" ] } }

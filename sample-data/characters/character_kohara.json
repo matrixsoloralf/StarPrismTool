@@ -1,0 +1,30 @@
+{
+  "Id": "character_kohara",
+  "Name": "小原",
+  "Title": "巡礼之光",
+  "DisplayName": "巡礼之光 小原",
+  "Profile": {
+    "Sex": "男",
+    "Age": 14,
+    "Story": "信仰坚定的见习神官，炽烈正义感总驱使他为弱者站到最前。",
+    "Quote": "这些人需要帮助，我不能当作没有看见！"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/kohara/cards/09Kohara.png",
+      "assets/characters/kohara/cards/26Kohara.png",
+      "assets/characters/kohara/cards/42Kobara.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_kohara_shengguangbaofa", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kohara_shusidikang", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kohara_chengji", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kohara_huyou", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kohara_zhiliao", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kohara_jianshou", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "神官", "治疗", "防御" ] }
+}

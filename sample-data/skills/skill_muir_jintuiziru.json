@@ -1,0 +1,1 @@
+{ "Id": "skill_muir_jintuiziru", "Name": "进退自如", "Type": "trigger", "Trigger": "hand_refill_phase", "Costs": [], "Targeting": null, "Description": "手牌补充阶段中，如邻近格存在敌方目标且自身手牌数为 4，可补充 2 张牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "补牌" ] } }

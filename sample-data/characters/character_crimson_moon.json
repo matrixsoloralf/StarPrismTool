@@ -1,0 +1,30 @@
+{
+  "Id": "character_crimson_moon",
+  "Name": "绯红之月",
+  "Title": "",
+  "DisplayName": "绯红之月",
+  "Profile": {
+    "Sex": "女",
+    "Age": 34,
+    "Story": "绯月海贼团首领，专门打击黑市贸易与权贵恶商，维护民众利益。",
+    "Quote": "给这些脑满肥肠的旱鸭子们一点颜色瞧瞧。"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/crimson_moon/cards/10Crimson_Moon.png",
+      "assets/characters/crimson_moon/cards/27Crimson_Moon.png",
+      "assets/characters/crimson_moon/cards/43Crimson_Moon.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_crimson_moon_fusutigge", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_crimson_moon_yuxuefenzhan", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_crimson_moon_shuangchi", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_crimson_moon_jinu", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_crimson_moon_zhanhou", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_crimson_moon_moce", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "海贼", "近战", "回复" ] }
+}

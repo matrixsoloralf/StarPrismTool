@@ -1,0 +1,1 @@
+{ "Id": "skill_zhiyou_yuhui", "Name": "迂回", "Type": "passive", "Trigger": "", "Costs": [], "Targeting": null, "Description": "D 可视作 M。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "转换", "移动" ] } }

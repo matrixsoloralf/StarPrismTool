@@ -1,0 +1,1 @@
+{ "Id": "skill_lulu_moliyongxian", "Name": "魔力涌现", "Type": "trigger", "Trigger": "action_end_if_no_active_move", "Costs": [], "Targeting": null, "Description": "行动结束时，如本次行动中没有主动移动过，可补充 1 张牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "补牌" ] } }

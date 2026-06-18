@@ -1,0 +1,1 @@
+{ "Id": "skill_rollo_jianbei", "Name": "兼备", "Type": "passive", "Trigger": "", "Costs": [], "Targeting": null, "Description": "D 可视作 A。A 可视作 D。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "转换" ] } }

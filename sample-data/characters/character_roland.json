@@ -1,0 +1,30 @@
+{
+  "Id": "character_roland",
+  "Name": "罗兰",
+  "Title": "苍蓝雄狮",
+  "DisplayName": "苍蓝雄狮 罗兰",
+  "Profile": {
+    "Sex": "男",
+    "Age": 46,
+    "Story": "久经沙场的皇家骑士长，以勇气、信念与骑士精神引导年轻士兵。",
+    "Quote": "勇敢不是无所畏惧，而是即使害怕，也依然挺身而出！"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/roland/cards/04Roland.png",
+      "assets/characters/roland/cards/21Roland.png",
+      "assets/characters/roland/cards/37Roland.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_roland_rongyaodaji", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_roland_qishijingshen", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_roland_tuji", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_roland_fanzhi", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_roland_cema", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_roland_dili", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "骑士", "近战" ] }
+}

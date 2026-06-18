@@ -1,0 +1,39 @@
+{
+  "Id": "skill_ur_hengsao",
+  "Name": "横扫",
+  "Type": "active",
+  "Trigger": "",
+  "Costs": [
+    {
+      "Card": "A",
+      "Count": 1
+    }
+  ],
+  "Targeting": {
+    "TargetType": "enemy",
+    "Range": 1,
+    "RangeShape": "front_arc",
+    "Movement": ""
+  },
+  "Description": "使用 A 对正面 1 格范围内的敌方目标分别造成 1 点物理伤害。",
+  "Effects": [
+    {
+      "Kind": "damage",
+      "Target": "targets",
+      "Amount": 1,
+      "DamageType": "physical",
+      "Condition": "",
+      "Notes": ""
+    }
+  ],
+  "Options": [],
+  "Metadata": {
+    "Version": 1,
+    "CreatedAt": "2026-06-18T00:00:00",
+    "UpdatedAt": "2026-06-18T00:00:00",
+    "Tags": [
+      "范围",
+      "物理"
+    ]
+  }
+}

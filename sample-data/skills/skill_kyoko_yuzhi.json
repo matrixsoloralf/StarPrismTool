@@ -1,0 +1,1 @@
+{ "Id": "skill_kyoko_yuzhi", "Name": "预知", "Type": "active", "Trigger": "", "Costs": [ { "Card": "T", "Count": 1 } ], "Targeting": null, "Description": "使用 T 查看牌堆顶 3 张牌，并获得其中 1 张，然后按任意顺序放回或者弃置另 2 张。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "预知", "牌堆" ] } }

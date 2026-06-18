@@ -1,0 +1,30 @@
+{
+  "Id": "character_trey",
+  "Name": "叁",
+  "Title": "天诛",
+  "DisplayName": "天诛 叁",
+  "Profile": {
+    "Sex": "男",
+    "Age": 40,
+    "Story": "身世成谜的猎魔剑士，精通剑术与魔法，完成委托干净利落。",
+    "Quote": "尘归尘，土归土。"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/trey/cards/08Trey.png",
+      "assets/characters/trey/cards/25Trey.png",
+      "assets/characters/trey/cards/41Trey.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_trey_canxinzhan", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_trey_moyingbu", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_trey_moren", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_trey_xiangbian", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_trey_fankui", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_trey_hongxi", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "猎魔", "剑士", "魔法" ] }
+}

@@ -42,6 +42,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -58,6 +59,17 @@
     <Compile Include="Components\SkillList.Designer.cs">
       <DependentUpon>SkillList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\Git\GitCommandResult.cs" />
+    <Compile Include="Data\Git\GitService.cs" />
+    <Compile Include="Data\Git\IGitService.cs" />
+    <Compile Include="Data\Json\IJsonFileStore.cs" />
+    <Compile Include="Data\Json\JsonFileStore.cs" />
+    <Compile Include="Data\Repositories\CharacterRepository.cs" />
+    <Compile Include="Data\Repositories\DataManifestRepository.cs" />
+    <Compile Include="Data\Repositories\JsonEntityRepositoryBase.cs" />
+    <Compile Include="Data\Repositories\JsonRepositoryBase.cs" />
+    <Compile Include="Data\Repositories\SkillRepository.cs" />
+    <Compile Include="Data\StarPrismDataService.cs" />
     <Compile Include="Forms\FrmInfoEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,15 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\AppConfiguration.cs" />
+    <Compile Include="Infrastructure\AppConfigurationService.cs" />
+    <Compile Include="Infrastructure\AppPaths.cs" />
+    <Compile Include="Infrastructure\OperationResult.cs" />
+    <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\DataManifest.cs" />
+    <Compile Include="Models\EntityMetadata.cs" />
+    <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\StarPrismDataSet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Components\CharacterCard.resx">

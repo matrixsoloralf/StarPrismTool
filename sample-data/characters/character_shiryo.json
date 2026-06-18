@@ -1,0 +1,30 @@
+{
+  "Id": "character_shiryo",
+  "Name": "尸凉",
+  "Title": "夜行魅影",
+  "DisplayName": "夜行魅影 尸凉",
+  "Profile": {
+    "Sex": "男",
+    "Age": 20,
+    "Story": "劫富济贫的神秘飞贼，遁影于夜色，以钩索穿梭街巷屋檐。",
+    "Quote": "即便微不足道，我也会尽我所能。"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/shiryo/cards/11Shiryo.png",
+      "assets/characters/shiryo/cards/28Shiryo.png",
+      "assets/characters/shiryo/cards/44Shiryo.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_shiryo_litijidong", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_shiryo_jifengxunlei", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_shiryo_goulian", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_shiryo_shanshen", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_shiryo_qianzhi", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_shiryo_xianfa", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "飞贼", "移动" ] }
+}

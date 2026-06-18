@@ -1,0 +1,1 @@
+{ "Id": "skill_roland_cema", "Name": "策马", "Type": "active", "Trigger": "twice_per_action", "Costs": [], "Targeting": null, "Description": "行动中限 2 次。舍弃 ? 获得 2 点机动力，但下次移动只能沿直线方向进行。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "机动力", "移动" ] } }

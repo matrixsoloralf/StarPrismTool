@@ -1,0 +1,42 @@
+{
+  "Id": "skill_ur_gedang",
+  "Name": "格挡",
+  "Type": "response",
+  "Trigger": "when_taking_melee_damage",
+  "Costs": [
+    {
+      "Card": "A",
+      "Count": 1
+    }
+  ],
+  "Targeting": null,
+  "Description": "受到近战伤害时，A 可视作 D 来响应，抵御伤害后，可补充 1 张牌。",
+  "Effects": [
+    {
+      "Kind": "defend",
+      "Target": "self",
+      "Amount": null,
+      "DamageType": "",
+      "Condition": "A_as_D",
+      "Notes": "A 可视作 D。"
+    },
+    {
+      "Kind": "draw",
+      "Target": "self",
+      "Amount": 1,
+      "DamageType": "",
+      "Condition": "after_defense",
+      "Notes": ""
+    }
+  ],
+  "Options": [],
+  "Metadata": {
+    "Version": 1,
+    "CreatedAt": "2026-06-18T00:00:00",
+    "UpdatedAt": "2026-06-18T00:00:00",
+    "Tags": [
+      "响应",
+      "防御"
+    ]
+  }
+}

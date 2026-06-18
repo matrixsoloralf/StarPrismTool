@@ -1,0 +1,51 @@
+{
+  "Id": "skill_ur_yongzhe_liezhan",
+  "Name": "勇者烈斩",
+  "Type": "active",
+  "Trigger": "",
+  "Costs": [
+    {
+      "Card": "A",
+      "Count": 1
+    },
+    {
+      "Card": "T",
+      "Count": 1
+    }
+  ],
+  "Targeting": {
+    "TargetType": "enemy",
+    "Range": 2,
+    "RangeShape": "reachable",
+    "Movement": "approach_target"
+  },
+  "Description": "使用 A + T 指定可行进距离 2 内的敌方目标，并接近目标，然后对其造成 2 点物理伤害。目标可舍弃 1 张手牌使本次伤害 -1，并使发动者回复 1 点生命值。",
+  "Effects": [
+    {
+      "Kind": "damage",
+      "Target": "target",
+      "Amount": 2,
+      "DamageType": "physical",
+      "Condition": "",
+      "Notes": ""
+    },
+    {
+      "Kind": "heal",
+      "Target": "caster",
+      "Amount": 1,
+      "DamageType": "",
+      "Condition": "target_discards_1_hand",
+      "Notes": "目标舍弃 1 张手牌时，本次伤害 -1。"
+    }
+  ],
+  "Options": [],
+  "Metadata": {
+    "Version": 1,
+    "CreatedAt": "2026-06-18T00:00:00",
+    "UpdatedAt": "2026-06-18T00:00:00",
+    "Tags": [
+      "物理",
+      "主动"
+    ]
+  }
+}

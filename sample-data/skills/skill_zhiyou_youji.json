@@ -1,0 +1,1 @@
+{ "Id": "skill_zhiyou_youji", "Name": "游击", "Type": "trigger", "Trigger": "once_outside_action_when_enemy_moves_closer", "Costs": [], "Targeting": null, "Description": "行动外限 1 次。当敌方目标移动靠近自身后，可立刻移动 1 格。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "移动", "行动外" ] } }

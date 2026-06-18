@@ -1,0 +1,1 @@
+{ "Id": "skill_crimson_moon_zhanhou", "Name": "战吼", "Type": "active", "Trigger": "during_action", "Costs": [], "Targeting": null, "Description": "行动中，可放置最多 1 张 T。造成伤害后，可消耗此 T 使本次伤害 +1。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "增伤" ] } }

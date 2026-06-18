@@ -1,0 +1,1 @@
+{ "Id": "skill_crimson_moon_moce", "Name": "莫测", "Type": "trigger", "Trigger": "after_taking_S", "Costs": [], "Targeting": null, "Description": "受到 S 后，可舍弃任意张被查看的手牌，再补充等量的牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "换牌" ] } }

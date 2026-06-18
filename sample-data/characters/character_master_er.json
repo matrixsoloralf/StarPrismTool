@@ -1,0 +1,30 @@
+{
+  "Id": "character_master_er",
+  "Name": "贰爷",
+  "Title": "老刃",
+  "DisplayName": "老刃 贰爷",
+  "Profile": {
+    "Sex": "男",
+    "Age": 68,
+    "Story": "忠心侍主的老管家，平日温和寡言，一旦出手便阴狠致命。",
+    "Quote": "少爷，有何吩咐？"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/master_er/cards/13Master_Er.png",
+      "assets/characters/master_er/cards/30Master_Er.png",
+      "assets/characters/master_er/cards/46Maser_Er.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_master_er_lengxuebeici", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_master_er_laomoushensuan", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_master_er_anqi", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_master_er_zhangyan", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_master_er_feichan", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_master_er_zhengzhuang", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "管家", "刺客", "物理" ] }
+}

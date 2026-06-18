@@ -1,0 +1,1 @@
+{ "Id": "skill_sakura_huanchong", "Name": "缓冲", "Type": "response", "Trigger": "when_taking_damage", "Costs": [], "Targeting": null, "Description": "行动外限 1 次。受到伤害时，可亮出 1 张 D，视作响应了 1 张 D，并向远离攻击者的方向移动 1 格。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "移动" ] } }

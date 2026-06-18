@@ -1,0 +1,1 @@
+{ "Id": "skill_muir_bangong", "Name": "佯攻", "Type": "trigger", "Trigger": "once_per_action_if_attack_deals_no_damage", "Costs": [], "Targeting": null, "Description": "行动中限 1 次。如果攻击未能造成伤害，可回收 1 张本次攻击用牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "回收", "攻击" ] } }

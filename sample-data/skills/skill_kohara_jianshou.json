@@ -1,0 +1,1 @@
+{ "Id": "skill_kohara_jianshou", "Name": "坚守", "Type": "response", "Trigger": "after_defending_with_M", "Costs": [], "Targeting": null, "Description": "M 可视作 D。响应 M 抵御伤害后，可补充 1 张牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "防御", "补牌" ] } }

@@ -1,0 +1,1 @@
+{ "Id": "skill_karter_yupan", "Name": "预判", "Type": "trigger", "Trigger": "after_using_S", "Costs": [], "Targeting": null, "Description": "使用 S 后，可将 1 张自己的手牌与 1 张查看的手牌交换。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "交换", "手牌" ] } }

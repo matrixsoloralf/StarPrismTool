@@ -1,0 +1,1 @@
+{ "Id": "skill_crimson_moon_jinu", "Name": "激怒", "Type": "trigger", "Trigger": "after_taking_damage", "Costs": [], "Targeting": null, "Description": "受到伤害后，可获得 1 张本次攻击用牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "受伤", "获得牌" ] } }

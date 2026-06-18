@@ -1,0 +1,30 @@
+{
+  "Id": "character_rollo",
+  "Name": "罗罗",
+  "Title": "守誓武姬",
+  "DisplayName": "守誓武姬 罗罗",
+  "Profile": {
+    "Sex": "女",
+    "Age": 22,
+    "Story": "尽忠职守的佣兵护卫，即使被随意使唤，仍执意守护目标周全。",
+    "Quote": "请不要离开我的保护范围。还是说，你又在故意为难我？"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/rollo/cards/15Rollo.png",
+      "assets/characters/rollo/cards/32Rollo.png",
+      "assets/characters/rollo/cards/48Rollo.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_rollo_yingyongyuanhu", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_rollo_dunpai_feibiao", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_rollo_dunji", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_rollo_chidun", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_rollo_jianbei", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_rollo_huquan", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "护卫", "防御", "物理" ] }
+}

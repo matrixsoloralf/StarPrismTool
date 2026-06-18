@@ -1,0 +1,1 @@
+{ "Id": "skill_karter_fanji", "Name": "反击", "Type": "response", "Trigger": "when_taking_melee_damage", "Costs": [], "Targeting": null, "Description": "受到近战伤害时，A 可视作 D。响应 A 抵御近战伤害后，可视作对攻击者发动 1 次基础攻击。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "反击" ] } }

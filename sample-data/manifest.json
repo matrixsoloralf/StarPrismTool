@@ -1,0 +1,568 @@
+{
+  "SchemaVersion": 1,
+  "Name": "StarPrism Sample Data",
+  "Characters": [
+    {
+      "Id": "character_ur",
+      "DisplayName": "勇者 乌尔",
+      "Path": "characters/character_ur.json"
+    },
+    {
+      "Id": "character_sakura",
+      "DisplayName": "北落师门 樱",
+      "Path": "characters/character_sakura.json"
+    },
+    {
+      "Id": "character_kyuka",
+      "DisplayName": "孤鹜剑 鸠歌",
+      "Path": "characters/character_kyuka.json"
+    },
+    {
+      "Id": "character_karter",
+      "DisplayName": "铁拳 卡特",
+      "Path": "characters/character_karter.json"
+    },
+    {
+      "Id": "character_roland",
+      "DisplayName": "苍蓝雄狮 罗兰",
+      "Path": "characters/character_roland.json"
+    },
+    {
+      "Id": "character_zhiyou",
+      "DisplayName": "百步穿杨 致友",
+      "Path": "characters/character_zhiyou.json"
+    },
+    {
+      "Id": "character_kyoko",
+      "DisplayName": "水镜 杏子",
+      "Path": "characters/character_kyoko.json"
+    },
+    {
+      "Id": "character_lulu",
+      "DisplayName": "魔法之子 胡芦",
+      "Path": "characters/character_lulu.json"
+    },
+    {
+      "Id": "character_trey",
+      "DisplayName": "天诛 叁",
+      "Path": "characters/character_trey.json"
+    },
+    {
+      "Id": "character_kohara",
+      "DisplayName": "巡礼之光 小原",
+      "Path": "characters/character_kohara.json"
+    },
+    {
+      "Id": "character_crimson_moon",
+      "DisplayName": "绯红之月",
+      "Path": "characters/character_crimson_moon.json"
+    },
+    {
+      "Id": "character_shiryo",
+      "DisplayName": "夜行魅影 尸凉",
+      "Path": "characters/character_shiryo.json"
+    },
+    {
+      "Id": "character_jerys",
+      "DisplayName": "赤红流星 杰瑞斯",
+      "Path": "characters/character_jerys.json"
+    },
+    {
+      "Id": "character_master_er",
+      "DisplayName": "老刃 贰爷",
+      "Path": "characters/character_master_er.json"
+    },
+    {
+      "Id": "character_muir",
+      "DisplayName": "霜之语 缪",
+      "Path": "characters/character_muir.json"
+    },
+    {
+      "Id": "character_rollo",
+      "DisplayName": "守誓武姬 罗罗",
+      "Path": "characters/character_rollo.json"
+    }
+  ],
+  "Skills": [
+    {
+      "Id": "skill_ur_yongzhe_liezhan",
+      "DisplayName": "勇者烈斩",
+      "Path": "skills/skill_ur_yongzhe_liezhan.json"
+    },
+    {
+      "Id": "skill_ur_jianding_yizhi",
+      "DisplayName": "坚定意志",
+      "Path": "skills/skill_ur_jianding_yizhi.json"
+    },
+    {
+      "Id": "skill_ur_hengsao",
+      "DisplayName": "横扫",
+      "Path": "skills/skill_ur_hengsao.json"
+    },
+    {
+      "Id": "skill_ur_gedang",
+      "DisplayName": "格挡",
+      "Path": "skills/skill_ur_gedang.json"
+    },
+    {
+      "Id": "skill_ur_qiangxi",
+      "DisplayName": "强袭",
+      "Path": "skills/skill_ur_qiangxi.json"
+    },
+    {
+      "Id": "skill_ur_zhijue",
+      "DisplayName": "直觉",
+      "Path": "skills/skill_ur_zhijue.json"
+    },
+    {
+      "Id": "skill_sakura_longyanchong",
+      "DisplayName": "龙炎冲",
+      "Path": "skills/skill_sakura_longyanchong.json"
+    },
+    {
+      "Id": "skill_sakura_xingyishu",
+      "DisplayName": "星移术",
+      "Path": "skills/skill_sakura_xingyishu.json"
+    },
+    {
+      "Id": "skill_sakura_chuanji",
+      "DisplayName": "穿击",
+      "Path": "skills/skill_sakura_chuanji.json"
+    },
+    {
+      "Id": "skill_sakura_huanchong",
+      "DisplayName": "缓冲",
+      "Path": "skills/skill_sakura_huanchong.json"
+    },
+    {
+      "Id": "skill_sakura_lingkong",
+      "DisplayName": "凌空",
+      "Path": "skills/skill_sakura_lingkong.json"
+    },
+    {
+      "Id": "skill_sakura_ningshen",
+      "DisplayName": "凝神",
+      "Path": "skills/skill_sakura_ningshen.json"
+    },
+    {
+      "Id": "skill_kyuka_yushajian",
+      "DisplayName": "狱杀剑",
+      "Path": "skills/skill_kyuka_yushajian.json"
+    },
+    {
+      "Id": "skill_kyuka_tianxiangluanwu",
+      "DisplayName": "天翔乱舞",
+      "Path": "skills/skill_kyuka_tianxiangluanwu.json"
+    },
+    {
+      "Id": "skill_kyuka_yingxi",
+      "DisplayName": "影袭",
+      "Path": "skills/skill_kyuka_yingxi.json"
+    },
+    {
+      "Id": "skill_kyuka_shoushen",
+      "DisplayName": "受身",
+      "Path": "skills/skill_kyuka_shoushen.json"
+    },
+    {
+      "Id": "skill_kyuka_ganrao",
+      "DisplayName": "干扰",
+      "Path": "skills/skill_kyuka_ganrao.json"
+    },
+    {
+      "Id": "skill_kyuka_qingbu",
+      "DisplayName": "轻步",
+      "Path": "skills/skill_kyuka_qingbu.json"
+    },
+    {
+      "Id": "skill_karter_fengleizhangbo",
+      "DisplayName": "风雷掌波",
+      "Path": "skills/skill_karter_fengleizhangbo.json"
+    },
+    {
+      "Id": "skill_karter_longzhuantiaoxi",
+      "DisplayName": "龙转调息",
+      "Path": "skills/skill_karter_longzhuantiaoxi.json"
+    },
+    {
+      "Id": "skill_karter_zhongji",
+      "DisplayName": "重击",
+      "Path": "skills/skill_karter_zhongji.json"
+    },
+    {
+      "Id": "skill_karter_tiebi",
+      "DisplayName": "铁壁",
+      "Path": "skills/skill_karter_tiebi.json"
+    },
+    {
+      "Id": "skill_karter_fanji",
+      "DisplayName": "反击",
+      "Path": "skills/skill_karter_fanji.json"
+    },
+    {
+      "Id": "skill_karter_yupan",
+      "DisplayName": "预判",
+      "Path": "skills/skill_karter_yupan.json"
+    },
+    {
+      "Id": "skill_roland_rongyaodaji",
+      "DisplayName": "荣耀打击",
+      "Path": "skills/skill_roland_rongyaodaji.json"
+    },
+    {
+      "Id": "skill_roland_qishijingshen",
+      "DisplayName": "骑士精神",
+      "Path": "skills/skill_roland_qishijingshen.json"
+    },
+    {
+      "Id": "skill_roland_tuji",
+      "DisplayName": "突击",
+      "Path": "skills/skill_roland_tuji.json"
+    },
+    {
+      "Id": "skill_roland_fanzhi",
+      "DisplayName": "反制",
+      "Path": "skills/skill_roland_fanzhi.json"
+    },
+    {
+      "Id": "skill_roland_cema",
+      "DisplayName": "策马",
+      "Path": "skills/skill_roland_cema.json"
+    },
+    {
+      "Id": "skill_roland_dili",
+      "DisplayName": "底力",
+      "Path": "skills/skill_roland_dili.json"
+    },
+    {
+      "Id": "skill_zhiyou_anjian_nanfang",
+      "DisplayName": "暗箭难防",
+      "Path": "skills/skill_zhiyou_anjian_nanfang.json"
+    },
+    {
+      "Id": "skill_zhiyou_fenliejian",
+      "DisplayName": "分裂箭",
+      "Path": "skills/skill_zhiyou_fenliejian.json"
+    },
+    {
+      "Id": "skill_zhiyou_juji",
+      "DisplayName": "狙击",
+      "Path": "skills/skill_zhiyou_juji.json"
+    },
+    {
+      "Id": "skill_zhiyou_yuhui",
+      "DisplayName": "迂回",
+      "Path": "skills/skill_zhiyou_yuhui.json"
+    },
+    {
+      "Id": "skill_zhiyou_youji",
+      "DisplayName": "游击",
+      "Path": "skills/skill_zhiyou_youji.json"
+    },
+    {
+      "Id": "skill_zhiyou_yinni",
+      "DisplayName": "隐匿",
+      "Path": "skills/skill_zhiyou_yinni.json"
+    },
+    {
+      "Id": "skill_kyoko_chongjijulang",
+      "DisplayName": "冲击巨浪",
+      "Path": "skills/skill_kyoko_chongjijulang.json"
+    },
+    {
+      "Id": "skill_kyoko_luanliuzhangbi",
+      "DisplayName": "乱流障壁",
+      "Path": "skills/skill_kyoko_luanliuzhangbi.json"
+    },
+    {
+      "Id": "skill_kyoko_jiliu",
+      "DisplayName": "激流",
+      "Path": "skills/skill_kyoko_jiliu.json"
+    },
+    {
+      "Id": "skill_kyoko_mingxiang",
+      "DisplayName": "冥想",
+      "Path": "skills/skill_kyoko_mingxiang.json"
+    },
+    {
+      "Id": "skill_kyoko_shuiliao",
+      "DisplayName": "水疗",
+      "Path": "skills/skill_kyoko_shuiliao.json"
+    },
+    {
+      "Id": "skill_kyoko_yuzhi",
+      "DisplayName": "预知",
+      "Path": "skills/skill_kyoko_yuzhi.json"
+    },
+    {
+      "Id": "skill_lulu_xingzhuishu",
+      "DisplayName": "星坠术",
+      "Path": "skills/skill_lulu_xingzhuishu.json"
+    },
+    {
+      "Id": "skill_lulu_moliyongxian",
+      "DisplayName": "魔力涌现",
+      "Path": "skills/skill_lulu_moliyongxian.json"
+    },
+    {
+      "Id": "skill_lulu_modan",
+      "DisplayName": "魔弹",
+      "Path": "skills/skill_lulu_modan.json"
+    },
+    {
+      "Id": "skill_lulu_bingdun",
+      "DisplayName": "冰盾",
+      "Path": "skills/skill_lulu_bingdun.json"
+    },
+    {
+      "Id": "skill_lulu_shanxian",
+      "DisplayName": "闪现",
+      "Path": "skills/skill_lulu_shanxian.json"
+    },
+    {
+      "Id": "skill_lulu_dongcha",
+      "DisplayName": "洞察",
+      "Path": "skills/skill_lulu_dongcha.json"
+    },
+    {
+      "Id": "skill_trey_canxinzhan",
+      "DisplayName": "残心斩",
+      "Path": "skills/skill_trey_canxinzhan.json"
+    },
+    {
+      "Id": "skill_trey_moyingbu",
+      "DisplayName": "魔影步",
+      "Path": "skills/skill_trey_moyingbu.json"
+    },
+    {
+      "Id": "skill_trey_moren",
+      "DisplayName": "魔刃",
+      "Path": "skills/skill_trey_moren.json"
+    },
+    {
+      "Id": "skill_trey_xiangbian",
+      "DisplayName": "相变",
+      "Path": "skills/skill_trey_xiangbian.json"
+    },
+    {
+      "Id": "skill_trey_fankui",
+      "DisplayName": "反窥",
+      "Path": "skills/skill_trey_fankui.json"
+    },
+    {
+      "Id": "skill_trey_hongxi",
+      "DisplayName": "虹吸",
+      "Path": "skills/skill_trey_hongxi.json"
+    },
+    {
+      "Id": "skill_kohara_shengguangbaofa",
+      "DisplayName": "圣光爆发",
+      "Path": "skills/skill_kohara_shengguangbaofa.json"
+    },
+    {
+      "Id": "skill_kohara_shusidikang",
+      "DisplayName": "殊死抵抗",
+      "Path": "skills/skill_kohara_shusidikang.json"
+    },
+    {
+      "Id": "skill_kohara_chengji",
+      "DisplayName": "惩击",
+      "Path": "skills/skill_kohara_chengji.json"
+    },
+    {
+      "Id": "skill_kohara_huyou",
+      "DisplayName": "护佑",
+      "Path": "skills/skill_kohara_huyou.json"
+    },
+    {
+      "Id": "skill_kohara_zhiliao",
+      "DisplayName": "治疗",
+      "Path": "skills/skill_kohara_zhiliao.json"
+    },
+    {
+      "Id": "skill_kohara_jianshou",
+      "DisplayName": "坚守",
+      "Path": "skills/skill_kohara_jianshou.json"
+    },
+    {
+      "Id": "skill_crimson_moon_fusutigge",
+      "DisplayName": "复苏体格",
+      "Path": "skills/skill_crimson_moon_fusutigge.json"
+    },
+    {
+      "Id": "skill_crimson_moon_yuxuefenzhan",
+      "DisplayName": "浴血奋战",
+      "Path": "skills/skill_crimson_moon_yuxuefenzhan.json"
+    },
+    {
+      "Id": "skill_crimson_moon_shuangchi",
+      "DisplayName": "双持",
+      "Path": "skills/skill_crimson_moon_shuangchi.json"
+    },
+    {
+      "Id": "skill_crimson_moon_jinu",
+      "DisplayName": "激怒",
+      "Path": "skills/skill_crimson_moon_jinu.json"
+    },
+    {
+      "Id": "skill_crimson_moon_zhanhou",
+      "DisplayName": "战吼",
+      "Path": "skills/skill_crimson_moon_zhanhou.json"
+    },
+    {
+      "Id": "skill_crimson_moon_moce",
+      "DisplayName": "莫测",
+      "Path": "skills/skill_crimson_moon_moce.json"
+    },
+    {
+      "Id": "skill_shiryo_litijidong",
+      "DisplayName": "立体机动",
+      "Path": "skills/skill_shiryo_litijidong.json"
+    },
+    {
+      "Id": "skill_shiryo_jifengxunlei",
+      "DisplayName": "疾风迅雷",
+      "Path": "skills/skill_shiryo_jifengxunlei.json"
+    },
+    {
+      "Id": "skill_shiryo_goulian",
+      "DisplayName": "钩链",
+      "Path": "skills/skill_shiryo_goulian.json"
+    },
+    {
+      "Id": "skill_shiryo_shanshen",
+      "DisplayName": "闪身",
+      "Path": "skills/skill_shiryo_shanshen.json"
+    },
+    {
+      "Id": "skill_shiryo_qianzhi",
+      "DisplayName": "牵制",
+      "Path": "skills/skill_shiryo_qianzhi.json"
+    },
+    {
+      "Id": "skill_shiryo_xianfa",
+      "DisplayName": "先发",
+      "Path": "skills/skill_shiryo_xianfa.json"
+    },
+    {
+      "Id": "skill_jerys_tieqichongzhen",
+      "DisplayName": "铁骑冲阵",
+      "Path": "skills/skill_jerys_tieqichongzhen.json"
+    },
+    {
+      "Id": "skill_jerys_sanbeijiasu",
+      "DisplayName": "三倍加速",
+      "Path": "skills/skill_jerys_sanbeijiasu.json"
+    },
+    {
+      "Id": "skill_jerys_tiaoji",
+      "DisplayName": "挑击",
+      "Path": "skills/skill_jerys_tiaoji.json"
+    },
+    {
+      "Id": "skill_jerys_jizhuan",
+      "DisplayName": "急转",
+      "Path": "skills/skill_jerys_jizhuan.json"
+    },
+    {
+      "Id": "skill_jerys_lanjie",
+      "DisplayName": "拦截",
+      "Path": "skills/skill_jerys_lanjie.json"
+    },
+    {
+      "Id": "skill_jerys_angyang",
+      "DisplayName": "昂扬",
+      "Path": "skills/skill_jerys_angyang.json"
+    },
+    {
+      "Id": "skill_master_er_lengxuebeici",
+      "DisplayName": "冷血背刺",
+      "Path": "skills/skill_master_er_lengxuebeici.json"
+    },
+    {
+      "Id": "skill_master_er_laomoushensuan",
+      "DisplayName": "老谋深算",
+      "Path": "skills/skill_master_er_laomoushensuan.json"
+    },
+    {
+      "Id": "skill_master_er_anqi",
+      "DisplayName": "暗器",
+      "Path": "skills/skill_master_er_anqi.json"
+    },
+    {
+      "Id": "skill_master_er_zhangyan",
+      "DisplayName": "障眼",
+      "Path": "skills/skill_master_er_zhangyan.json"
+    },
+    {
+      "Id": "skill_master_er_feichan",
+      "DisplayName": "飞檐",
+      "Path": "skills/skill_master_er_feichan.json"
+    },
+    {
+      "Id": "skill_master_er_zhengzhuang",
+      "DisplayName": "整装",
+      "Path": "skills/skill_master_er_zhengzhuang.json"
+    },
+    {
+      "Id": "skill_muir_shuangdongxinxing",
+      "DisplayName": "霜冻新星",
+      "Path": "skills/skill_muir_shuangdongxinxing.json"
+    },
+    {
+      "Id": "skill_muir_jintuiziru",
+      "DisplayName": "进退自如",
+      "Path": "skills/skill_muir_jintuiziru.json"
+    },
+    {
+      "Id": "skill_muir_bingdong",
+      "DisplayName": "冰冻",
+      "Path": "skills/skill_muir_bingdong.json"
+    },
+    {
+      "Id": "skill_muir_yingbian",
+      "DisplayName": "应变",
+      "Path": "skills/skill_muir_yingbian.json"
+    },
+    {
+      "Id": "skill_muir_bangong",
+      "DisplayName": "佯攻",
+      "Path": "skills/skill_muir_bangong.json"
+    },
+    {
+      "Id": "skill_muir_zisheng",
+      "DisplayName": "自省",
+      "Path": "skills/skill_muir_zisheng.json"
+    },
+    {
+      "Id": "skill_rollo_yingyongyuanhu",
+      "DisplayName": "英勇援护",
+      "Path": "skills/skill_rollo_yingyongyuanhu.json"
+    },
+    {
+      "Id": "skill_rollo_dunpai_feibiao",
+      "DisplayName": "盾牌飞掷",
+      "Path": "skills/skill_rollo_dunpai_feibiao.json"
+    },
+    {
+      "Id": "skill_rollo_dunji",
+      "DisplayName": "盾击",
+      "Path": "skills/skill_rollo_dunji.json"
+    },
+    {
+      "Id": "skill_rollo_chidun",
+      "DisplayName": "持盾",
+      "Path": "skills/skill_rollo_chidun.json"
+    },
+    {
+      "Id": "skill_rollo_jianbei",
+      "DisplayName": "兼备",
+      "Path": "skills/skill_rollo_jianbei.json"
+    },
+    {
+      "Id": "skill_rollo_huquan",
+      "DisplayName": "护全",
+      "Path": "skills/skill_rollo_huquan.json"
+    }
+  ]
+}

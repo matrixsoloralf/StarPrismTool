@@ -1,0 +1,1 @@
+{ "Id": "skill_rollo_chidun", "Name": "持盾", "Type": "active", "Trigger": "during_action", "Costs": [], "Targeting": null, "Description": "行动中，可放置最多 1 张 D。消耗此牌可视作使用 / 响应 1 张 D。行动开始时可不弃置此牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "盾", "防御" ] } }

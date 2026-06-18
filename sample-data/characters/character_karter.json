@@ -1,0 +1,30 @@
+{
+  "Id": "character_karter",
+  "Name": "卡特",
+  "Title": "铁拳",
+  "DisplayName": "铁拳 卡特",
+  "Profile": {
+    "Sex": "男",
+    "Age": 42,
+    "Story": "隐居山林、日夜修行的武痴，坚信拳拳相交方能看见真心。",
+    "Quote": "别说那些有的没的，来比划比划如何？"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/karter/cards/03Karter.png",
+      "assets/characters/karter/cards/20Karter.png",
+      "assets/characters/karter/cards/36Karter.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_karter_fengleizhangbo", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_karter_longzhuantiaoxi", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_karter_zhongji", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_karter_tiebi", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_karter_fanji", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_karter_yupan", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "拳", "近战" ] }
+}

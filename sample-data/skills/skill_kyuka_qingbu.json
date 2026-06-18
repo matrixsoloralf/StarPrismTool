@@ -1,0 +1,1 @@
+{ "Id": "skill_kyuka_qingbu", "Name": "轻步", "Type": "active", "Trigger": "", "Costs": [ { "Card": "M", "Count": 1 } ], "Targeting": null, "Description": "使用 M 获得 3 点机动力。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "机动力" ] } }

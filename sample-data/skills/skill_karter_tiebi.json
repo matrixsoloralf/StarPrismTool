@@ -1,0 +1,1 @@
+{ "Id": "skill_karter_tiebi", "Name": "铁壁", "Type": "response", "Trigger": "once_outside_action", "Costs": [], "Targeting": null, "Description": "行动外限 1 次。? 可视作 D。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "防御" ] } }

@@ -1,0 +1,1 @@
+{ "Id": "skill_jerys_lanjie", "Name": "拦截", "Type": "response", "Trigger": "when_taking_ranged_damage", "Costs": [], "Targeting": null, "Description": "受到远程伤害时，A 可视作 D 来响应。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "防御" ] } }

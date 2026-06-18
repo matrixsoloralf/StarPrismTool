@@ -1,0 +1,1 @@
+{ "Id": "skill_jerys_angyang", "Name": "昂扬", "Type": "trigger", "Trigger": "after_dealing_damage", "Costs": [], "Targeting": null, "Description": "每造成 1 点伤害后，可解除自己 1 张封印手牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "解除封印" ] } }

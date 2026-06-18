@@ -1,0 +1,30 @@
+{
+  "Id": "character_kyoko",
+  "Name": "杏子",
+  "Title": "水镜",
+  "DisplayName": "水镜 杏子",
+  "Profile": {
+    "Sex": "女",
+    "Age": null,
+    "Story": "既是命运的窥探者，也是命运的执行者，只会在必要之处现身。",
+    "Quote": "命运似水，而你……会不会正是那一处湍流？"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/kyoko/cards/06Kyoko.png",
+      "assets/characters/kyoko/cards/23Kyoko.png",
+      "assets/characters/kyoko/cards/39Kyoko.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_kyoko_chongjijulang", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyoko_luanliuzhangbi", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyoko_jiliu", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyoko_mingxiang", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyoko_shuiliao", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_kyoko_yuzhi", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "水", "魔法" ] }
+}

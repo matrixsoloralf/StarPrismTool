@@ -1,0 +1,1 @@
+{ "Id": "skill_shiryo_xianfa", "Name": "先发", "Type": "trigger", "Trigger": "when_hand_reaches_5", "Costs": [], "Targeting": null, "Description": "手牌达到 5 张时，可提前开始行动。但在本次行动结束时，须将手牌弃至最多 3 张。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "行动", "手牌" ] } }

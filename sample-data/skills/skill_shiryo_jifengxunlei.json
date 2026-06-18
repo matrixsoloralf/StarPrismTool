@@ -1,0 +1,1 @@
+{ "Id": "skill_shiryo_jifengxunlei", "Name": "疾风迅雷", "Type": "trigger", "Trigger": "after_single_move_at_least_3", "Costs": [], "Targeting": null, "Description": "单次移动至少 3 格后，使本次行动中下一次造成的伤害额外响应 1 张 S。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "移动", "响应" ] } }

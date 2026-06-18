@@ -1,0 +1,69 @@
+{
+  "Id": "character_ur",
+  "Name": "乌尔",
+  "Title": "勇者",
+  "DisplayName": "勇者 乌尔",
+  "Profile": {
+    "Sex": "男",
+    "Age": 16,
+    "Story": "失去故乡与亲人的少年，在不断战斗中成长为守护同伴的勇者。",
+    "Quote": "我已经失去了故土和亲人，不能再让这样的悲剧重演。"
+  },
+  "Assets": {
+    "PortraitPath": "assets/characters/ur/portrait.png",
+    "IllustrationPath": "assets/characters/ur/illustration.png",
+    "CardFronts": [
+      "assets/characters/ur/cards/00Ur.png",
+      "assets/characters/ur/cards/17Ur.png",
+      "assets/characters/ur/cards/33Ur.png"
+    ]
+  },
+  "SkillLinks": [
+    {
+      "SkillId": "skill_ur_yongzhe_liezhan",
+      "Order": 1,
+      "OverrideName": "",
+      "OverrideDescription": ""
+    },
+    {
+      "SkillId": "skill_ur_jianding_yizhi",
+      "Order": 2,
+      "OverrideName": "",
+      "OverrideDescription": ""
+    },
+    {
+      "SkillId": "skill_ur_hengsao",
+      "Order": 3,
+      "OverrideName": "",
+      "OverrideDescription": ""
+    },
+    {
+      "SkillId": "skill_ur_gedang",
+      "Order": 4,
+      "OverrideName": "",
+      "OverrideDescription": ""
+    },
+    {
+      "SkillId": "skill_ur_qiangxi",
+      "Order": 5,
+      "OverrideName": "",
+      "OverrideDescription": ""
+    },
+    {
+      "SkillId": "skill_ur_zhijue",
+      "Order": 6,
+      "OverrideName": "",
+      "OverrideDescription": ""
+    }
+  ],
+  "Metadata": {
+    "Version": 1,
+    "CreatedAt": "2026-06-18T00:00:00",
+    "UpdatedAt": "2026-06-18T00:00:00",
+    "Tags": [
+      "勇者",
+      "近战",
+      "物理"
+    ]
+  }
+}

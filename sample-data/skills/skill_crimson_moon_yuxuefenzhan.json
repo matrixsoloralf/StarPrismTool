@@ -1,0 +1,1 @@
+{ "Id": "skill_crimson_moon_yuxuefenzhan", "Name": "浴血奋战", "Type": "active", "Trigger": "once_per_action", "Costs": [], "Targeting": null, "Description": "行动中限 1 次。可以失去 1 生命值，使本次行动中下一次造成的伤害无法被 D 响应。如生命值为 1 时发动，则无须失去生命值。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "伤害", "生命" ] } }

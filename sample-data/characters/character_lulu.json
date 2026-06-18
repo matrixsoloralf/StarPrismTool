@@ -1,0 +1,30 @@
+{
+  "Id": "character_lulu",
+  "Name": "胡芦",
+  "Title": "魔法之子",
+  "DisplayName": "魔法之子 胡芦",
+  "Profile": {
+    "Sex": "女",
+    "Age": 12,
+    "Story": "百年一见的魔法天才少女，却总因恶作剧惹出一堆麻烦。",
+    "Quote": "要来真的吗，是吗？你可不要后悔哦。"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/lulu/cards/07Lulu.png",
+      "assets/characters/lulu/cards/24Lulu.png",
+      "assets/characters/lulu/cards/40Lulu.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_lulu_xingzhuishu", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_lulu_moliyongxian", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_lulu_modan", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_lulu_bingdun", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_lulu_shanxian", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_lulu_dongcha", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "魔法", "少女" ] }
+}

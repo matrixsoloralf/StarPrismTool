@@ -1,0 +1,30 @@
+{
+  "Id": "character_sakura",
+  "Name": "樱",
+  "Title": "北落师门",
+  "DisplayName": "北落师门 樱",
+  "Profile": {
+    "Sex": "女",
+    "Age": 15,
+    "Story": "出身魔法名门，因魔力暴走酿成灾难，压抑天赋后改习枪术掌握命运。",
+    "Quote": "我说，你这也算是求人办事的态度吗？"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/sakura/cards/01Sakura.png",
+      "assets/characters/sakura/cards/18Sakura.png",
+      "assets/characters/sakura/cards/34Sakura.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_sakura_longyanchong", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_sakura_xingyishu", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_sakura_chuanji", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_sakura_huanchong", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_sakura_lingkong", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_sakura_ningshen", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "魔法", "枪术" ] }
+}

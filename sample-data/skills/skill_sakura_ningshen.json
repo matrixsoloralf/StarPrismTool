@@ -1,0 +1,1 @@
+{ "Id": "skill_sakura_ningshen", "Name": "凝神", "Type": "active", "Trigger": "once_per_action", "Costs": [ { "Card": "R", "Count": 1 } ], "Targeting": null, "Description": "行动中限 1 次。使用 R 回复 1 生命值，并补充 1 张牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "回复", "补牌" ] } }

@@ -1,0 +1,1 @@
+{ "Id": "skill_kyoko_mingxiang", "Name": "冥想", "Type": "passive", "Trigger": "", "Costs": [], "Targeting": null, "Description": "M 可视作 R。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "转换", "回复" ] } }

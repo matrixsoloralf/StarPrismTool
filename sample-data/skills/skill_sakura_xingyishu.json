@@ -1,0 +1,1 @@
+{ "Id": "skill_sakura_xingyishu", "Name": "星移术", "Type": "active", "Trigger": "once_per_action", "Costs": [], "Targeting": null, "Description": "行动中限 1 次。舍弃 2 张手牌视作打出 1 张任意牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "手牌", "转换" ] } }

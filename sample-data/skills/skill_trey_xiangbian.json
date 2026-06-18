@@ -1,0 +1,1 @@
+{ "Id": "skill_trey_xiangbian", "Name": "相变", "Type": "response", "Trigger": "when_targeted_by_attack", "Costs": [], "Targeting": null, "Description": "受到攻击指定时，可进行判定。如为 D/M，可使本次的物理攻击失效；如为 S/T，可使本次的魔法攻击失效。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "判定" ] } }

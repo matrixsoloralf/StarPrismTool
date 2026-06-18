@@ -1,0 +1,1 @@
+{ "Id": "skill_karter_longzhuantiaoxi", "Name": "龙转调息", "Type": "active", "Trigger": "once_per_action", "Costs": [], "Targeting": null, "Description": "行动中限 1 次。舍弃任意张手牌，再补充等量的牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "换牌" ] } }

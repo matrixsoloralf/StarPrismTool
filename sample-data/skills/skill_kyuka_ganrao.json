@@ -1,0 +1,1 @@
+{ "Id": "skill_kyuka_ganrao", "Name": "干扰", "Type": "trigger", "Trigger": "after_using_S_on_melee_target", "Costs": [], "Targeting": null, "Description": "对近战范围的目标使用 S 后，可弃置 1 张查看的手牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "干扰", "弃牌" ] } }

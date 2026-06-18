@@ -1,0 +1,31 @@
+{
+  "Id": "skill_ur_jianding_yizhi",
+  "Name": "坚定意志",
+  "Type": "trigger",
+  "Trigger": "after_taking_damage",
+  "Costs": [],
+  "Targeting": null,
+  "Description": "受到伤害后，可选择：1.补充 1 张牌；2.解除 1 张封印的手牌。",
+  "Effects": [],
+  "Options": [
+    {
+      "Kind": "draw",
+      "Amount": 1,
+      "Notes": "补充 1 张牌。"
+    },
+    {
+      "Kind": "unseal_hand_card",
+      "Amount": 1,
+      "Notes": "解除 1 张封印的手牌。"
+    }
+  ],
+  "Metadata": {
+    "Version": 1,
+    "CreatedAt": "2026-06-18T00:00:00",
+    "UpdatedAt": "2026-06-18T00:00:00",
+    "Tags": [
+      "受伤",
+      "触发"
+    ]
+  }
+}

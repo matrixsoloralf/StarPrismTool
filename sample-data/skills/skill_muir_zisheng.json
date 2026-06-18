@@ -1,0 +1,1 @@
+{ "Id": "skill_muir_zisheng", "Name": "自省", "Type": "passive", "Trigger": "", "Costs": [], "Targeting": null, "Description": "S 视作 T。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "转换" ] } }

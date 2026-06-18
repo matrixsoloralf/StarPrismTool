@@ -1,0 +1,28 @@
+{
+  "Id": "skill_ur_qiangxi",
+  "Name": "强袭",
+  "Type": "active",
+  "Trigger": "once_per_action",
+  "Costs": [],
+  "Targeting": null,
+  "Description": "行动中限 1 次。舍弃 ?，获得 2 点机动力。",
+  "Effects": [
+    {
+      "Kind": "gain_mobility",
+      "Target": "self",
+      "Amount": 2,
+      "DamageType": "",
+      "Condition": "discard_unknown_card",
+      "Notes": "行动中限 1 次。"
+    }
+  ],
+  "Options": [],
+  "Metadata": {
+    "Version": 1,
+    "CreatedAt": "2026-06-18T00:00:00",
+    "UpdatedAt": "2026-06-18T00:00:00",
+    "Tags": [
+      "机动力"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{ "Id": "skill_kyuka_shoushen", "Name": "受身", "Type": "response", "Trigger": "when_defending", "Costs": [], "Targeting": null, "Description": "S 可视作 D。响应 S 抵御伤害后，可获得 1 张本次攻击用牌。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "防御" ] } }

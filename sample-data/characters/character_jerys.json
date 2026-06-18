@@ -1,0 +1,30 @@
+{
+  "Id": "character_jerys",
+  "Name": "杰瑞斯",
+  "Title": "赤红流星",
+  "DisplayName": "赤红流星 杰瑞斯",
+  "Profile": {
+    "Sex": "男",
+    "Age": 22,
+    "Story": "立功心切的皇家骑士团新星，渴望证明自己无愧赤红流星之名。",
+    "Quote": "赤红流星可不是浪得虚名的！跟紧我，胜利属于我们！"
+  },
+  "Assets": {
+    "PortraitPath": "",
+    "IllustrationPath": "",
+    "CardFronts": [
+      "assets/characters/jerys/cards/12Jerys.png",
+      "assets/characters/jerys/cards/29Jerys.png",
+      "assets/characters/jerys/cards/45Jerys.png"
+    ]
+  },
+  "SkillLinks": [
+    { "SkillId": "skill_jerys_tieqichongzhen", "Order": 1, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_jerys_sanbeijiasu", "Order": 2, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_jerys_tiaoji", "Order": 3, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_jerys_jizhuan", "Order": 4, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_jerys_lanjie", "Order": 5, "OverrideName": "", "OverrideDescription": "" },
+    { "SkillId": "skill_jerys_angyang", "Order": 6, "OverrideName": "", "OverrideDescription": "" }
+  ],
+  "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "骑士", "移动", "物理" ] }
+}

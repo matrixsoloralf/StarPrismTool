@@ -1,0 +1,1 @@
+{ "Id": "skill_trey_fankui", "Name": "反窥", "Type": "response", "Trigger": "when_targeted_by_S", "Costs": [ { "Card": "T", "Count": 1 } ], "Targeting": null, "Description": "受到 S 指定时，可响应 T 使该 S 失效，并无视距离，进行反向 S。", "Effects": [], "Options": [], "Metadata": { "Version": 1, "CreatedAt": "2026-06-18T00:00:00", "UpdatedAt": "2026-06-18T00:00:00", "Tags": [ "响应", "侦察" ] } }
