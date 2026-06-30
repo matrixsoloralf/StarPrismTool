@@ -33,12 +33,19 @@
 			this.lblChara = new System.Windows.Forms.ToolStripLabel();
 			this.cboCharacter = new System.Windows.Forms.ToolStripComboBox();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.btnInfoEdit = new System.Windows.Forms.ToolStripButton();
+			this.btnSkillLinking = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.btnViewCode = new System.Windows.Forms.ToolStripButton();
+			this.btnDelete = new System.Windows.Forms.ToolStripButton();
 			this.pnlChara = new System.Windows.Forms.SplitContainer();
 			this.pnlInfo = new System.Windows.Forms.SplitContainer();
 			this.tabProfile = new System.Windows.Forms.TabControl();
 			this.tpProfile = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.btnPortraitEdit = new System.Windows.Forms.Button();
 			this.lblStory = new System.Windows.Forms.Label();
+			this.picPortrait = new System.Windows.Forms.PictureBox();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.lblQuote = new System.Windows.Forms.Label();
 			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -49,16 +56,12 @@
 			this.tabSkill = new System.Windows.Forms.TabControl();
 			this.tpSkill = new System.Windows.Forms.TabPage();
 			this.dgvSkil = new System.Windows.Forms.DataGridView();
-			this.tabIllustration = new System.Windows.Forms.TabControl();
-			this.tpIllustration = new System.Windows.Forms.TabPage();
 			this.dgvColSkillName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dgvColSkillDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.btnPortraitEdit = new System.Windows.Forms.Button();
-			this.picPortrait = new System.Windows.Forms.PictureBox();
+			this.tabIllustration = new System.Windows.Forms.TabControl();
+			this.tpIllustration = new System.Windows.Forms.TabPage();
 			this.btnIllustrationEdit = new System.Windows.Forms.Button();
 			this.picIllustration = new System.Windows.Forms.PictureBox();
-			this.btnInfoEdit = new System.Windows.Forms.ToolStripButton();
-			this.btnSkillLinking = new System.Windows.Forms.ToolStripButton();
 			this.stpTool.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pnlChara)).BeginInit();
 			this.pnlChara.Panel1.SuspendLayout();
@@ -71,6 +74,7 @@
 			this.tabProfile.SuspendLayout();
 			this.tpProfile.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.picPortrait)).BeginInit();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.tableLayoutPanel3.SuspendLayout();
 			this.tabSkill.SuspendLayout();
@@ -78,7 +82,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgvSkil)).BeginInit();
 			this.tabIllustration.SuspendLayout();
 			this.tpIllustration.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.picPortrait)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picIllustration)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -89,7 +92,10 @@
             this.cboCharacter,
             this.toolStripSeparator1,
             this.btnInfoEdit,
-            this.btnSkillLinking});
+            this.btnSkillLinking,
+            this.toolStripSeparator2,
+            this.btnViewCode,
+            this.btnDelete});
 			this.stpTool.Location = new System.Drawing.Point(0, 0);
 			this.stpTool.Name = "stpTool";
 			this.stpTool.Size = new System.Drawing.Size(600, 25);
@@ -113,6 +119,43 @@
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+			// 
+			// btnInfoEdit
+			// 
+			this.btnInfoEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnInfoEdit.Image")));
+			this.btnInfoEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnInfoEdit.Name = "btnInfoEdit";
+			this.btnInfoEdit.Size = new System.Drawing.Size(77, 22);
+			this.btnInfoEdit.Text = "Info Edit";
+			// 
+			// btnSkillLinking
+			// 
+			this.btnSkillLinking.Image = ((System.Drawing.Image)(resources.GetObject("btnSkillLinking.Image")));
+			this.btnSkillLinking.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnSkillLinking.Name = "btnSkillLinking";
+			this.btnSkillLinking.Size = new System.Drawing.Size(96, 22);
+			this.btnSkillLinking.Text = "Skill Linking";
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+			// 
+			// btnViewCode
+			// 
+			this.btnViewCode.Image = ((System.Drawing.Image)(resources.GetObject("btnViewCode.Image")));
+			this.btnViewCode.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnViewCode.Name = "btnViewCode";
+			this.btnViewCode.Size = new System.Drawing.Size(90, 22);
+			this.btnViewCode.Text = "View Code";
+			// 
+			// btnDelete
+			// 
+			this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+			this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnDelete.Name = "btnDelete";
+			this.btnDelete.Size = new System.Drawing.Size(65, 22);
+			this.btnDelete.Text = "Delete";
 			// 
 			// pnlChara
 			// 
@@ -175,10 +218,10 @@
 			this.tableLayoutPanel1.ColumnCount = 2;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.25287F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.74712F));
-			this.tableLayoutPanel1.Controls.Add(this.btnPortraitEdit, 0, 1);
 			this.tableLayoutPanel1.Controls.Add(this.lblStory, 1, 1);
 			this.tableLayoutPanel1.Controls.Add(this.picPortrait, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
+			this.tableLayoutPanel1.Controls.Add(this.btnPortraitEdit, 0, 1);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -189,15 +232,37 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(348, 107);
 			this.tableLayoutPanel1.TabIndex = 2;
 			// 
+			// btnPortraitEdit
+			// 
+			this.btnPortraitEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.btnPortraitEdit.BackgroundImage = global::StarPrismTools.Properties.Resources.be0abb14409e4427af114252e5b91dad;
+			this.btnPortraitEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnPortraitEdit.Location = new System.Drawing.Point(17, 66);
+			this.btnPortraitEdit.Name = "btnPortraitEdit";
+			this.btnPortraitEdit.Size = new System.Drawing.Size(32, 32);
+			this.btnPortraitEdit.TabIndex = 5;
+			this.btnPortraitEdit.UseVisualStyleBackColor = true;
+			// 
 			// lblStory
 			// 
 			this.lblStory.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblStory.Location = new System.Drawing.Point(70, 63);
+			this.lblStory.Location = new System.Drawing.Point(69, 63);
 			this.lblStory.Name = "lblStory";
-			this.lblStory.Size = new System.Drawing.Size(275, 44);
+			this.lblStory.Size = new System.Drawing.Size(276, 44);
 			this.lblStory.TabIndex = 4;
 			this.lblStory.Text = "Story";
 			this.lblStory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// picPortrait
+			// 
+			this.picPortrait.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.picPortrait.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.picPortrait.Location = new System.Drawing.Point(3, 3);
+			this.picPortrait.Name = "picPortrait";
+			this.picPortrait.Size = new System.Drawing.Size(60, 57);
+			this.picPortrait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.picPortrait.TabIndex = 1;
+			this.picPortrait.TabStop = false;
 			// 
 			// tableLayoutPanel2
 			// 
@@ -206,13 +271,13 @@
 			this.tableLayoutPanel2.Controls.Add(this.lblQuote, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(67, 0);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(66, 0);
 			this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
 			this.tableLayoutPanel2.RowCount = 2;
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(281, 63);
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(282, 63);
 			this.tableLayoutPanel2.TabIndex = 3;
 			// 
 			// lblQuote
@@ -220,7 +285,7 @@
 			this.lblQuote.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblQuote.Location = new System.Drawing.Point(3, 31);
 			this.lblQuote.Name = "lblQuote";
-			this.lblQuote.Size = new System.Drawing.Size(275, 32);
+			this.lblQuote.Size = new System.Drawing.Size(276, 32);
 			this.lblQuote.TabIndex = 1;
 			this.lblQuote.Text = "Quote";
 			this.lblQuote.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -242,7 +307,7 @@
 			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
 			this.tableLayoutPanel3.RowCount = 1;
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel3.Size = new System.Drawing.Size(281, 31);
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(282, 31);
 			this.tableLayoutPanel3.TabIndex = 0;
 			// 
 			// lblAge
@@ -250,7 +315,7 @@
 			this.lblAge.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblAge.Location = new System.Drawing.Point(227, 0);
 			this.lblAge.Name = "lblAge";
-			this.lblAge.Size = new System.Drawing.Size(51, 31);
+			this.lblAge.Size = new System.Drawing.Size(52, 31);
 			this.lblAge.TabIndex = 3;
 			this.lblAge.Text = "Age";
 			this.lblAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -318,6 +383,20 @@
 			this.dgvSkil.Size = new System.Drawing.Size(348, 160);
 			this.dgvSkil.TabIndex = 0;
 			// 
+			// dgvColSkillName
+			// 
+			this.dgvColSkillName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dgvColSkillName.FillWeight = 25F;
+			this.dgvColSkillName.HeaderText = "Name";
+			this.dgvColSkillName.Name = "dgvColSkillName";
+			// 
+			// dgvColSkillDescription
+			// 
+			this.dgvColSkillDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dgvColSkillDescription.FillWeight = 75F;
+			this.dgvColSkillDescription.HeaderText = "Description";
+			this.dgvColSkillDescription.Name = "dgvColSkillDescription";
+			// 
 			// tabIllustration
 			// 
 			this.tabIllustration.Controls.Add(this.tpIllustration);
@@ -339,42 +418,6 @@
 			this.tpIllustration.TabIndex = 0;
 			this.tpIllustration.Text = "Illustration";
 			this.tpIllustration.UseVisualStyleBackColor = true;
-			// 
-			// dgvColSkillName
-			// 
-			this.dgvColSkillName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dgvColSkillName.FillWeight = 25F;
-			this.dgvColSkillName.HeaderText = "Name";
-			this.dgvColSkillName.Name = "dgvColSkillName";
-			// 
-			// dgvColSkillDescription
-			// 
-			this.dgvColSkillDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dgvColSkillDescription.FillWeight = 75F;
-			this.dgvColSkillDescription.HeaderText = "Description";
-			this.dgvColSkillDescription.Name = "dgvColSkillDescription";
-			// 
-			// btnPortraitEdit
-			// 
-			this.btnPortraitEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnPortraitEdit.BackgroundImage = global::StarPrismTools.Properties.Resources.be0abb14409e4427af114252e5b91dad;
-			this.btnPortraitEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnPortraitEdit.Location = new System.Drawing.Point(17, 69);
-			this.btnPortraitEdit.Name = "btnPortraitEdit";
-			this.btnPortraitEdit.Size = new System.Drawing.Size(32, 32);
-			this.btnPortraitEdit.TabIndex = 5;
-			this.btnPortraitEdit.UseVisualStyleBackColor = true;
-			// 
-			// picPortrait
-			// 
-			this.picPortrait.BackColor = System.Drawing.SystemColors.ControlDark;
-			this.picPortrait.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.picPortrait.Location = new System.Drawing.Point(3, 3);
-			this.picPortrait.Name = "picPortrait";
-			this.picPortrait.Size = new System.Drawing.Size(61, 57);
-			this.picPortrait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.picPortrait.TabIndex = 1;
-			this.picPortrait.TabStop = false;
 			// 
 			// btnIllustrationEdit
 			// 
@@ -398,22 +441,6 @@
 			this.picIllustration.TabIndex = 1;
 			this.picIllustration.TabStop = false;
 			// 
-			// btnInfoEdit
-			// 
-			this.btnInfoEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnInfoEdit.Image")));
-			this.btnInfoEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnInfoEdit.Name = "btnInfoEdit";
-			this.btnInfoEdit.Size = new System.Drawing.Size(77, 22);
-			this.btnInfoEdit.Text = "Info Edit";
-			// 
-			// btnSkillLinking
-			// 
-			this.btnSkillLinking.Image = ((System.Drawing.Image)(resources.GetObject("btnSkillLinking.Image")));
-			this.btnSkillLinking.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnSkillLinking.Name = "btnSkillLinking";
-			this.btnSkillLinking.Size = new System.Drawing.Size(96, 22);
-			this.btnSkillLinking.Text = "Skill Linking";
-			// 
 			// CharacterCard
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +462,7 @@
 			this.tabProfile.ResumeLayout(false);
 			this.tpProfile.ResumeLayout(false);
 			this.tableLayoutPanel1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.picPortrait)).EndInit();
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.tableLayoutPanel3.ResumeLayout(false);
 			this.tabSkill.ResumeLayout(false);
@@ -442,7 +470,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgvSkil)).EndInit();
 			this.tabIllustration.ResumeLayout(false);
 			this.tpIllustration.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.picPortrait)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picIllustration)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -481,5 +508,8 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn dgvColSkillName;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dgvColSkillDescription;
 		private System.Windows.Forms.Button btnPortraitEdit;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private System.Windows.Forms.ToolStripButton btnDelete;
+		private System.Windows.Forms.ToolStripButton btnViewCode;
 	}
 }

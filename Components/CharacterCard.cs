@@ -34,7 +34,11 @@ namespace StarPrismTools.Components
 			btnSkillLinking.Click += BtnSkillLinking_Click;
 			btnPortraitEdit.Click += BtnPortraitEdit_Click;
 			btnIllustrationEdit.Click += BtnIllustrationEdit_Click;
+			btnDelete.Click += BtnDelete_Click;
+			btnViewCode.Click += BtnViewCode_Click;
 		}
+
+		public event EventHandler CharacterDataChanged;
 
 		public void BindData(IEnumerable<Character> characters, IEnumerable<Skill> skills, string repositoryRoot)
 		{
@@ -93,6 +97,57 @@ namespace StarPrismTools.Components
 		private void BtnIllustrationEdit_Click(object sender, EventArgs e)
 		{
 			ImportCharacterImage("illustration");
+		}
+
+		private void BtnDelete_Click(object sender, EventArgs e)
+		{
+			Character character = cboCharacter.SelectedItem as Character;
+			if (character == null)
+			{
+				return;
+			}
+
+			string displayName = string.IsNullOrWhiteSpace(character.DisplayName) ? character.Name : character.DisplayName;
+			DialogResult confirm = MessageBox.Show(
+				this,
+				"Delete character \"" + displayName + "\"?\r\n\r\nThe character JSON and manifest entry will be removed. Linked skill JSON files will be kept.",
+				"Delete Character",
+				MessageBoxButtons.YesNo,
+				MessageBoxIcon.Warning);
+			if (confirm != DialogResult.Yes)
+			{
+				return;
+			}
+
+			OperationResult deleteResult = DeleteCharacter(character);
+			if (!deleteResult.Success)
+			{
+				MessageBox.Show(this, deleteResult.Message, "StarPrism Tools", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			characters.RemoveAll(item => item.Id == character.Id);
+			BindData(characters, skills, repositoryRoot);
+			OnCharacterDataChanged();
+		}
+
+		private void BtnViewCode_Click(object sender, EventArgs e)
+		{
+			Character character = cboCharacter.SelectedItem as Character;
+			if (character == null)
+			{
+				return;
+			}
+
+			using (FrmViewCode form = new FrmViewCode(character, SaveCharacterJsonFromCode))
+			{
+				form.ShowDialog(this);
+				if (form.SavedCharacter != null)
+				{
+					ReplaceCharacter(form.SavedCharacter);
+					OnCharacterDataChanged();
+				}
+			}
 		}
 
 		private void ShowCharacter(Character character)
@@ -205,6 +260,125 @@ namespace StarPrismTools.Components
 			return Path.Combine("assets", "characters", safeCharacterName, fileName).Replace('\\', '/');
 		}
 
+		private OperationResult<Character> SaveCharacterJsonFromCode(string json)
+		{
+			OperationResult<Character> parseResult = FrmViewCode.ParseCharacter(json);
+			if (!parseResult.Success)
+			{
+				return parseResult;
+			}
+
+			if (string.IsNullOrWhiteSpace(repositoryRoot))
+			{
+				return OperationResult<Character>.Fail("Data repository path is required.");
+			}
+
+			Character character = parseResult.Value;
+			OperationResult saveResult = SaveCharacterAndManifest(character);
+			if (!saveResult.Success)
+			{
+				return OperationResult<Character>.Fail(saveResult.Message, saveResult.Exception);
+			}
+
+			return OperationResult<Character>.Ok(character);
+		}
+
+		private OperationResult SaveCharacterAndManifest(Character character)
+		{
+			try
+			{
+				CharacterRepository characterRepository = new CharacterRepository(new JsonFileStore(), repositoryRoot);
+				OperationResult saveResult = characterRepository.Save(character);
+				if (!saveResult.Success)
+				{
+					return saveResult;
+				}
+
+				DataManifestRepository manifestRepository = new DataManifestRepository(new JsonFileStore(), repositoryRoot);
+				OperationResult<DataManifest> manifestResult = manifestRepository.Load();
+				if (!manifestResult.Success)
+				{
+					return manifestResult;
+				}
+
+				DataManifest manifest = manifestResult.Value;
+				EntityIndexItem item = manifest.Characters.FirstOrDefault(indexItem => indexItem.Id == character.Id);
+				if (item == null)
+				{
+					item = new EntityIndexItem
+					{
+						Id = character.Id,
+						Path = "characters/" + NormalizePathSegment(character.Id) + ".json"
+					};
+					manifest.Characters.Add(item);
+				}
+
+				item.DisplayName = string.IsNullOrWhiteSpace(character.DisplayName) ? character.Name : character.DisplayName;
+				return manifestRepository.Save(manifest);
+			}
+			catch (Exception ex)
+			{
+				return OperationResult.Fail("Failed to save character JSON.", ex);
+			}
+		}
+
+		private OperationResult DeleteCharacter(Character character)
+		{
+			try
+			{
+				if (string.IsNullOrWhiteSpace(repositoryRoot))
+				{
+					return OperationResult.Fail("Data repository path is required.");
+				}
+
+				DataManifestRepository manifestRepository = new DataManifestRepository(new JsonFileStore(), repositoryRoot);
+				OperationResult<DataManifest> manifestResult = manifestRepository.Load();
+				if (!manifestResult.Success)
+				{
+					return manifestResult;
+				}
+
+				DataManifest manifest = manifestResult.Value;
+				EntityIndexItem item = manifest.Characters.FirstOrDefault(indexItem => indexItem.Id == character.Id);
+				string relativePath = item == null ? Path.Combine("characters", NormalizePathSegment(character.Id) + ".json") : item.Path;
+				manifest.Characters.RemoveAll(indexItem => indexItem.Id == character.Id);
+				OperationResult saveResult = manifestRepository.Save(manifest);
+				if (!saveResult.Success)
+				{
+					return saveResult;
+				}
+
+				string fullPath = Path.Combine(repositoryRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (File.Exists(fullPath))
+				{
+					File.Delete(fullPath);
+				}
+
+				return OperationResult.Ok();
+			}
+			catch (Exception ex)
+			{
+				return OperationResult.Fail("Failed to delete character.", ex);
+			}
+		}
+
+		private void ReplaceCharacter(Character character)
+		{
+			int index = characters.FindIndex(item => item.Id == character.Id);
+			if (index >= 0)
+			{
+				characters[index] = character;
+			}
+			else
+			{
+				characters.Add(character);
+			}
+
+			BindData(characters, skills, repositoryRoot);
+			cboCharacter.SelectedItem = characters.FirstOrDefault(item => item.Id == character.Id);
+			ShowCharacter(character);
+		}
+
 		private void LoadCharacterImages(Character character)
 		{
 			if (character.Assets == null)
@@ -256,6 +430,15 @@ namespace StarPrismTools.Components
 			}
 
 			return value.Trim();
+		}
+
+		private void OnCharacterDataChanged()
+		{
+			EventHandler handler = CharacterDataChanged;
+			if (handler != null)
+			{
+				handler(this, EventArgs.Empty);
+			}
 		}
 	}
 }

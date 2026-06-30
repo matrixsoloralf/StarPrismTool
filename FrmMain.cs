@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -10,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StarPrismTools.Components;
 using StarPrismTools.Data;
+using StarPrismTools.Data.Export;
 using StarPrismTools.Data.Git;
+using StarPrismTools.Data.Import;
 using StarPrismTools.Data.Json;
 using StarPrismTools.Infrastructure;
 using StarPrismTools.Models;
@@ -21,6 +24,8 @@ namespace StarPrismTools
 	{
 		private readonly AppConfigurationService configurationService;
 		private readonly StarPrismDataService dataService;
+		private readonly ExcelCharacterImportService excelCharacterImportService;
+		private readonly MarkdownCharacterExportService markdownCharacterExportService;
 		private readonly IGitService gitService;
 		private AppConfiguration configuration;
 		private StarPrismDataSet dataSet;
@@ -33,12 +38,17 @@ namespace StarPrismTools
 			JsonFileStore jsonFileStore = new JsonFileStore();
 			configurationService = new AppConfigurationService(jsonFileStore);
 			dataService = new StarPrismDataService(jsonFileStore);
+			excelCharacterImportService = new ExcelCharacterImportService(jsonFileStore);
+			markdownCharacterExportService = new MarkdownCharacterExportService();
 			gitService = new GitService();
 			conceptCardMap = new Dictionary<string, ConceptCard>();
 			Load += FrmMain_Load;
 			btnLoad.Click += BtnLoad_Click;
+			btnImport.Click += BtnImport_Click;
+			btnExport2MD.Click += BtnExport2MD_Click;
 			btnSave.Click += BtnSave_Click;
 			btnExit.Click += BtnExit_Click;
+			characterCard.CharacterDataChanged += CharacterCard_CharacterDataChanged;
 			btnExpandAll.Click += BtnExpandAll_Click;
 			btnCollapseAll.Click += BtnCollapseAll_Click;
 			btnConceptSearch.Click += BtnConceptSearch_Click;
@@ -81,6 +91,109 @@ namespace StarPrismTools
 			}
 		}
 
+		private void BtnImport_Click(object sender, EventArgs e)
+		{
+			if (configuration == null || string.IsNullOrWhiteSpace(configuration.RepositoryPath))
+			{
+				MessageBox.Show(this, "Please select a JSON data repository first.", "StarPrism Tools", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
+
+			using (OpenFileDialog dialog = new OpenFileDialog())
+			{
+				dialog.Title = "Import character Excel";
+				dialog.Filter = "Excel Workbook (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+				dialog.Multiselect = false;
+
+				if (dialog.ShowDialog(this) != DialogResult.OK)
+				{
+					return;
+				}
+
+				OperationResult<ExcelCharacterImportPlan> planResult = excelCharacterImportService.CreatePlan(dialog.FileName, dataSet);
+				if (!planResult.Success)
+				{
+					ShowError(planResult);
+					return;
+				}
+
+				ExcelCharacterImportPlan plan = planResult.Value;
+				string prompt = string.Format(
+					"Parsed {0} characters and {1} skills from Excel.{2}{2}New characters: {3}{2}Characters to overwrite by ID: {4}{2}{2}Overwrite current data for matching character IDs?",
+					plan.Characters.Count,
+					plan.Skills.Count,
+					Environment.NewLine,
+					plan.NewCharacterNames.Count,
+					plan.OverwrittenCharacterNames.Count);
+				DialogResult confirm = MessageBox.Show(this, prompt, "Import Character Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+				if (confirm != DialogResult.Yes)
+				{
+					return;
+				}
+
+				OperationResult<ExcelCharacterImportResult> importResult = excelCharacterImportService.ApplyPlan(configuration.RepositoryPath, dataSet, plan);
+				if (!importResult.Success)
+				{
+					ShowError(importResult);
+					return;
+				}
+
+				LoadDataSet();
+				MessageBox.Show(
+					this,
+					string.Format(
+						"Import completed.{0}{0}Characters: {1}{0}Skills: {2}{0}Overwritten: {3}{0}New: {4}",
+						Environment.NewLine,
+						importResult.Value.CharacterCount,
+						importResult.Value.SkillCount,
+						importResult.Value.OverwrittenCharacterCount,
+						importResult.Value.NewCharacterCount),
+					"StarPrism Tools",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Information);
+			}
+		}
+
+		private void BtnExport2MD_Click(object sender, EventArgs e)
+		{
+			if (dataSet == null || dataSet.Characters == null || dataSet.Characters.Count == 0)
+			{
+				MessageBox.Show(this, "No character data is loaded.", "StarPrism Tools", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
+
+			using (SaveFileDialog dialog = new SaveFileDialog())
+			{
+				dialog.Title = "Export character Markdown";
+				dialog.Filter = "Markdown File (*.md)|*.md|All files (*.*)|*.*";
+				dialog.FileName = "StarPrism_Character_Info.md";
+				dialog.DefaultExt = "md";
+				dialog.AddExtension = true;
+				dialog.OverwritePrompt = true;
+
+				if (configuration != null && Directory.Exists(configuration.RepositoryPath))
+				{
+					dialog.InitialDirectory = configuration.RepositoryPath;
+				}
+
+				if (dialog.ShowDialog(this) != DialogResult.OK)
+				{
+					return;
+				}
+
+				try
+				{
+					string markdown = markdownCharacterExportService.Export(dataSet.Characters, dataSet.Skills);
+					File.WriteAllText(dialog.FileName, markdown, new UTF8Encoding(false));
+					MessageBox.Show(this, "Markdown export completed.", "StarPrism Tools", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+				catch (Exception ex)
+				{
+					ShowError(OperationResult.Fail("Failed to export Markdown: " + ex.Message, ex));
+				}
+			}
+		}
+
 		private void BtnSave_Click(object sender, EventArgs e)
 		{
 			OperationResult saveResult = configurationService.Save(configuration);
@@ -96,6 +209,11 @@ namespace StarPrismTools
 		private void BtnExit_Click(object sender, EventArgs e)
 		{
 			Close();
+		}
+
+		private void CharacterCard_CharacterDataChanged(object sender, EventArgs e)
+		{
+			LoadDataSet();
 		}
 
 		private void LoadConfiguration()

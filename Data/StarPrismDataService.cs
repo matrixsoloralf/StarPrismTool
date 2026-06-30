@@ -43,8 +43,17 @@ namespace StarPrismTools.Data
 				Concepts = new List<Concept>()
 			};
 
+			HashSet<string> loadedCharacterIds = new HashSet<string>();
+			HashSet<string> loadedCharacterPaths = new HashSet<string>();
 			foreach (EntityIndexItem item in dataSet.Manifest.Characters)
 			{
+				string characterIdKey = (item.Id ?? string.Empty).Trim().ToLowerInvariant();
+				string characterPathKey = (item.Path ?? string.Empty).Trim().Replace('\\', '/').ToLowerInvariant();
+				if (loadedCharacterIds.Contains(characterIdKey) || loadedCharacterPaths.Contains(characterPathKey))
+				{
+					continue;
+				}
+
 				OperationResult<Character> characterResult = jsonFileStore.Load<Character>(Path.Combine(repositoryRoot, item.Path));
 				if (!characterResult.Success)
 				{
@@ -52,6 +61,15 @@ namespace StarPrismTools.Data
 				}
 
 				dataSet.Characters.Add(characterResult.Value);
+				if (!string.IsNullOrWhiteSpace(characterIdKey))
+				{
+					loadedCharacterIds.Add(characterIdKey);
+				}
+
+				if (!string.IsNullOrWhiteSpace(characterPathKey))
+				{
+					loadedCharacterPaths.Add(characterPathKey);
+				}
 			}
 
 			foreach (EntityIndexItem item in dataSet.Manifest.Skills)
